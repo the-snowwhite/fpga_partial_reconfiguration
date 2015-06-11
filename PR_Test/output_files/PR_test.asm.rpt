@@ -1,5 +1,5 @@
 Assembler report for PR_test
-Mon Jun 08 22:22:37 2015
+Thu Jun 11 15:35:29 2015
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -10,8 +10,10 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: F:/Quartus/workspace/PR_test-2015-06-08/PR_test/output_files/PR_test.sof
-  6. Assembler Messages
+  5. Assembler Device Options: F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.sof
+  6. Assembler Device Options: F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.static.msf
+  7. Assembler Device Options: F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.x1y1.msf
+  8. Assembler Messages
 
 
 
@@ -38,7 +40,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Jun 08 22:22:37 2015 ;
+; Assembler Status      ; Successful - Thu Jun 11 15:35:29 2015 ;
 ; Revision Name         ; PR_test                               ;
 ; Top-level Entity Name ; PR_test_top                           ;
 ; Family                ; Cyclone V                             ;
@@ -53,24 +55,45 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+--------------------------------------------------------------------------+
-; Assembler Generated Files                                                ;
-+--------------------------------------------------------------------------+
-; File Name                                                                ;
-+--------------------------------------------------------------------------+
-; F:/Quartus/workspace/PR_test-2015-06-08/PR_test/output_files/PR_test.sof ;
-+--------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                 ;
++-------------------------------------------------------------------------------------------+
+; File Name                                                                                 ;
++-------------------------------------------------------------------------------------------+
+; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.sof        ;
+; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.static.msf ;
+; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.x1y1.msf   ;
++-------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Assembler Device Options: F:/Quartus/workspace/PR_test-2015-06-08/PR_test/output_files/PR_test.sof ;
-+----------------+-----------------------------------------------------------------------------------+
-; Option         ; Setting                                                                           ;
-+----------------+-----------------------------------------------------------------------------------+
-; Device         ; 5CSEMA5F31C6                                                                      ;
-; JTAG usercode  ; 0x00B70D8F                                                                        ;
-; Checksum       ; 0x00B70D8F                                                                        ;
-+----------------+-----------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.sof ;
++----------------+---------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                     ;
++----------------+---------------------------------------------------------------------------------------------+
+; Device         ; 5CSEMA5F31C6                                                                                ;
+; JTAG usercode  ; 0x00B56F50                                                                                  ;
+; Checksum       ; 0x00B56F50                                                                                  ;
++----------------+---------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.static.msf ;
++---------+-----------------------------------------------------------------------------------------------------------+
+; Option  ; Setting                                                                                                   ;
++---------+-----------------------------------------------------------------------------------------------------------+
+; Device  ; 5CSEMA5F31C6                                                                                              ;
++---------+-----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.x1y1.msf ;
++------------------+------------------------------------------------------------------------------------------------+
+; Option           ; Setting                                                                                        ;
++------------------+------------------------------------------------------------------------------------------------+
+; Device           ; 5CSEMA5F31C6                                                                                   ;
+; PR bitstream ID  ; -1551556108                                                                                    ;
++------------------+------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -79,13 +102,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Mon Jun 08 22:22:28 2015
+    Info: Processing started: Thu Jun 11 15:35:17 2015
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off PR_test -c PR_test
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 750 megabytes
-    Info: Processing ended: Mon Jun 08 22:22:37 2015
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 813 megabytes
+    Info: Processing ended: Thu Jun 11 15:35:29 2015
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:12
 
 

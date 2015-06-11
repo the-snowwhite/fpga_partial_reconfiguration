@@ -111,10 +111,30 @@ set_location_assignment PIN_AA26 -to disp_hex5[5]
 set_location_assignment PIN_AA25 -to disp_hex5[6]
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_SYNTH -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name PARTITION_COLOR 39423 -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name ALLOW_MULTIPLE_PERSONAS ON -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_ENABLED ON -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_AUTO_SIZE OFF -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_STATE LOCKED -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_RESERVED ON -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_CORE_ONLY OFF -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_SECURITY_ROUTING_INTERFACE OFF -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_IGNORE_IO_BANK_SECURITY_CONSTRAINT OFF -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_PR_REGION ON -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_ROUTING_REGION_EXPANSION_SIZE 12 -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_WIDTH 10 -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_HEIGHT 10 -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_ORIGIN X1_Y1 -section_id "led_wrapper:led_wrapper_inst"
+set_instance_assignment -name LL_MEMBER_OF "led_wrapper:led_wrapper_inst" -to "freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst" -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name LL_ROUTING_REGION EXPANDED -section_id "led_wrapper:led_wrapper_inst"
+set_global_assignment -name RECONFIGURABLE_REVISION ReconfigRev
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY ledwr_6aed1 -to "freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst" -section_id "led_wrapper:led_wrapper_inst"
 set_global_assignment -name VHDL_FILE ticker_disp.vhd
 set_global_assignment -name VHDL_FILE PR_test_top.vhd
 set_global_assignment -name VHDL_FILE freeze_region.vhd
-set_global_assignment -name VHDL_FILE led_wrapper.vhd
 set_global_assignment -name VHDL_FILE led_wrapper_generell.vhd
 set_global_assignment -name VHDL_FILE led_flash_4.vhd
 set_global_assignment -name VHDL_FILE pr_states.vhd
@@ -128,6 +148,3 @@ set_global_assignment -name VHDL_FILE persona2_rom_pr.vhd
 set_global_assignment -name CDF_FILE output_files/Chain1.cdf
 set_global_assignment -name CDF_FILE output_files/Chain3.cdf
 set_global_assignment -name CDF_FILE output_files/Chain2.cdf
-set_global_assignment -name VHDL_FILE led_wrapper_2.vhd
-set_global_assignment -name VHDL_FILE led_flash_2.vhd
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

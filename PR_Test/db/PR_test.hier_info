@@ -65,17 +65,16 @@ disp_hex5[6] << ticker_disp:ticker_inst.disp_hex5[6]
 |PR_test_top|freeze_region:freeze_region_inst
 clk => led_wrapper:led_wrapper_inst.clk
 clk => dir_sync.CLK
-clk => led_wrapper_2:led_wrapper_inst_2.clk
 dir => dir_sync.DATAIN
 freeze => dir_sync.ENA
 leds[0] <= led_wrapper:led_wrapper_inst.leds[0]
 leds[1] <= led_wrapper:led_wrapper_inst.leds[1]
 leds[2] <= led_wrapper:led_wrapper_inst.leds[2]
 leds[3] <= led_wrapper:led_wrapper_inst.leds[3]
-second_leds[0] <= led_wrapper_2:led_wrapper_inst_2.second_leds[0]
-second_leds[1] <= led_wrapper_2:led_wrapper_inst_2.second_leds[1]
-second_leds[2] <= led_wrapper_2:led_wrapper_inst_2.second_leds[2]
-second_leds[3] <= led_wrapper_2:led_wrapper_inst_2.second_leds[3]
+second_leds[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+second_leds[1] <= second_leds[1].DB_MAX_OUTPUT_PORT_TYPE
+second_leds[2] <= second_leds[2].DB_MAX_OUTPUT_PORT_TYPE
+second_leds[3] <= second_leds[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst
@@ -123,56 +122,6 @@ leds[0] <= leds[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 leds[1] <= leds[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 leds[2] <= leds[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 leds[3] <= leds[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PR_test_top|freeze_region:freeze_region_inst|led_wrapper_2:led_wrapper_inst_2
-clk => led_flash_2:led_flash_inst_2.clk
-dir => led_flash_2:led_flash_inst_2.dir
-second_leds[0] <= led_flash_2:led_flash_inst_2.second_leds[0]
-second_leds[1] <= led_flash_2:led_flash_inst_2.second_leds[1]
-second_leds[2] <= led_flash_2:led_flash_inst_2.second_leds[2]
-second_leds[3] <= led_flash_2:led_flash_inst_2.second_leds[3]
-
-
-|PR_test_top|freeze_region:freeze_region_inst|led_wrapper_2:led_wrapper_inst_2|led_flash_2:led_flash_inst_2
-clk => second_leds[0]~reg0.CLK
-clk => second_leds[1]~reg0.CLK
-clk => second_leds[2]~reg0.CLK
-clk => second_leds[3]~reg0.CLK
-clk => \led_flash_2:count[0].CLK
-clk => \led_flash_2:count[1].CLK
-clk => \led_flash_2:count[2].CLK
-clk => \led_flash_2:count[3].CLK
-clk => \led_flash_2:count[4].CLK
-clk => \led_flash_2:count[5].CLK
-clk => \led_flash_2:count[6].CLK
-clk => \led_flash_2:count[7].CLK
-clk => \led_flash_2:count[8].CLK
-clk => \led_flash_2:count[9].CLK
-clk => \led_flash_2:count[10].CLK
-clk => \led_flash_2:count[11].CLK
-clk => \led_flash_2:count[12].CLK
-clk => \led_flash_2:count[13].CLK
-clk => \led_flash_2:count[14].CLK
-clk => \led_flash_2:count[15].CLK
-clk => \led_flash_2:count[16].CLK
-clk => \led_flash_2:count[17].CLK
-clk => \led_flash_2:count[18].CLK
-clk => \led_flash_2:count[19].CLK
-clk => \led_flash_2:count[20].CLK
-clk => \led_flash_2:count[21].CLK
-clk => \led_flash_2:count[22].CLK
-clk => \led_flash_2:count[23].CLK
-clk => \led_flash_2:count[24].CLK
-clk => \led_flash_2:count[25].CLK
-dir => second_leds.OUTPUTSELECT
-dir => second_leds.OUTPUTSELECT
-dir => second_leds.OUTPUTSELECT
-dir => second_leds.OUTPUTSELECT
-second_leds[0] <= second_leds[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-second_leds[1] <= second_leds[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-second_leds[2] <= second_leds[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-second_leds[3] <= second_leds[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |PR_test_top|pr_user_host:pr_user_host_inst

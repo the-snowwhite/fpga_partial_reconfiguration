@@ -19,12 +19,12 @@ architecture behv of freeze_region is
 			leds	: out STD_LOGIC_VECTOR (3 downto 0));
 	end component;
 	
-	component led_wrapper_2
-			port(
-			clk	: in STD_LOGIC;
-			dir	: in STD_LOGIC;		 
-			second_leds	: out STD_LOGIC_VECTOR (3 downto 0));
-	end component;
+--	component led_wrapper_2
+--			port(
+--			clk	: in STD_LOGIC;
+--			dir	: in STD_LOGIC;		 
+--			second_leds	: out STD_LOGIC_VECTOR (3 downto 0));
+--	end component;
 
 	signal dir_sync: STD_LOGIC;			
 
@@ -36,11 +36,11 @@ led_wrapper_inst: led_wrapper
    dir   => dir_sync, 
    leds  => leds);
 	
-led_wrapper_inst_2: led_wrapper_2
- port map (
-   clk   => clk, 
-   dir   => dir_sync, 
-   second_leds  => second_leds);
+--led_wrapper_inst_2: led_wrapper_2
+-- port map (
+--   clk   => clk, 
+--   dir   => dir_sync, 
+--   second_leds  => second_leds);
 
 
  process(clk) begin
