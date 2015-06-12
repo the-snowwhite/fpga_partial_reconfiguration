@@ -148,3 +148,4 @@ set_global_assignment -name VHDL_FILE persona2_rom_pr.vhd
 set_global_assignment -name CDF_FILE output_files/Chain1.cdf
 set_global_assignment -name CDF_FILE output_files/Chain3.cdf
 set_global_assignment -name CDF_FILE output_files/Chain2.cdf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
