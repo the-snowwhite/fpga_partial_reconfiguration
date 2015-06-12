@@ -1,0 +1,7 @@
+Status Quo des Projekts:
+***************************************************
+static region (Größe?)		-> ticker (soll weiterlaufen während der Rekonfiguration)
+
+pr region (Größe?)		-> zwei verschiedene LED Muster; persona A (Muster #1), persona B (Muster #2)
+
+wrapper design partition
