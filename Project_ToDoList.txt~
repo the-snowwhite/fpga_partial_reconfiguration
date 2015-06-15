@@ -1,8 +1,3 @@
-
-TESTEETESTE
-
-
-
 ﻿"Die Rekonfigurierung über den internal host wäre genau das, was ich gerne hätte. D.h. es sollte möglich sein, ein C/C++ Programm auf dem Hard Processor auszuführen, welches dann die PR übernimmt." Andreas Riefert
 ************************************************************************
 Die Rekonfigurierung des FPGAs über einen internen Host. 
