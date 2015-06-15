@@ -5,8 +5,8 @@ entity freeze_region is
     port( 	clk				: in STD_LOGIC;
 				dir				: in STD_LOGIC;		 
 				freeze			: in STD_LOGIC;
-				leds				: out STD_LOGIC_VECTOR (3 downto 0);
-				second_leds		: out STD_LOGIC_VECTOR (3 downto 0)
+				leds				: out STD_LOGIC_VECTOR (3 downto 0)
+--				second_leds		: out STD_LOGIC_VECTOR (3 downto 0)
 				);
 end freeze_region;
 
@@ -16,7 +16,8 @@ architecture behv of freeze_region is
 			port(
 			clk	: in STD_LOGIC;
 			dir	: in STD_LOGIC;		 
-			leds	: out STD_LOGIC_VECTOR (3 downto 0));
+			leds	: out STD_LOGIC_VECTOR (3 downto 0)
+			);
 	end component;
 	
 --	component led_wrapper_2

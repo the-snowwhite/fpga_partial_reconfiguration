@@ -1,6 +1,6 @@
 Partition Merge report for ReconfigRev
-Thu Jun 11 15:49:51 2015
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+Mon Jun 15 19:15:45 2015
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
 ---------------------
@@ -19,7 +19,7 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -36,27 +36,27 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Partition Merge Summary                                                       ;
-+---------------------------------+---------------------------------------------+
-; Partition Merge Status          ; Successful - Thu Jun 11 15:49:51 2015       ;
-; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
-; Revision Name                   ; ReconfigRev                                 ;
-; Top-level Entity Name           ; PR_test_top                                 ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; 160 / 32,070 ( < 1 % )                      ;
-; Total registers                 ; 84                                          ;
-; Total pins                      ; 57 / 457 ( 12 % )                           ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------+
+; Partition Merge Summary                                                      ;
++---------------------------------+--------------------------------------------+
+; Partition Merge Status          ; Successful - Mon Jun 15 19:15:45 2015      ;
+; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
+; Revision Name                   ; ReconfigRev                                ;
+; Top-level Entity Name           ; PR_test_top                                ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; 195 / 32,070 ( < 1 % )                     ;
+; Total registers                 ; 86                                         ;
+; Total pins                      ; 57 / 457 ( 12 % )                          ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                      ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                             ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
++---------------------------------+--------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -75,19 +75,19 @@ agreement for further details.
 +---------------------------------------------+-----------------------+------------------------------+--------------------------------+
 ; Statistic                                   ; Top                   ; led_wrapper:led_wrapper_inst ; hard_block:auto_generated_inst ;
 +---------------------------------------------+-----------------------+------------------------------+--------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 116 / 32070 ( < 1 % ) ; 44 / 32070 ( < 1 % )         ; 0 / 32070 ( 0 % )              ;
+; Estimate of Logic utilization (ALMs needed) ; 116 / 32070 ( < 1 % ) ; 80 / 32070 ( < 1 % )         ; 0 / 32070 ( 0 % )              ;
 ;                                             ;                       ;                              ;                                ;
-; Combinational ALUT usage for logic          ; 198                   ; 88                           ; 0                              ;
-;     -- 7 input functions                    ; 0                     ; 1                            ; 0                              ;
-;     -- 6 input functions                    ; 86                    ; 29                           ; 0                              ;
-;     -- 5 input functions                    ; 25                    ; 9                            ; 0                              ;
-;     -- 4 input functions                    ; 20                    ; 8                            ; 0                              ;
-;     -- <=3 input functions                  ; 67                    ; 41                           ; 0                              ;
+; Combinational ALUT usage for logic          ; 198                   ; 159                          ; 0                              ;
+;     -- 7 input functions                    ; 0                     ; 0                            ; 0                              ;
+;     -- 6 input functions                    ; 86                    ; 72                           ; 0                              ;
+;     -- 5 input functions                    ; 25                    ; 17                           ; 0                              ;
+;     -- 4 input functions                    ; 20                    ; 19                           ; 0                              ;
+;     -- <=3 input functions                  ; 67                    ; 51                           ; 0                              ;
 ; Memory ALUT usage                           ; 0                     ; 0                            ; 0                              ;
 ;     -- 64-address deep                      ; 0                     ; 0                            ; 0                              ;
 ;     -- 32-address deep                      ; 0                     ; 0                            ; 0                              ;
 ;                                             ;                       ;                              ;                                ;
-; Dedicated logic registers                   ; 54 / 128280 ( < 1 % ) ; 30 / 128280 ( < 1 % )        ; 0 / 128280 ( 0 % )             ;
+; Dedicated logic registers                   ; 54 / 128280 ( < 1 % ) ; 32 / 128280 ( < 1 % )        ; 0 / 128280 ( 0 % )             ;
 ;                                             ;                       ;                              ;                                ;
 ;                                             ;                       ;                              ;                                ;
 ; I/O pins                                    ; 57                    ; 0                            ; 0                              ;
@@ -96,18 +96,18 @@ agreement for further details.
 ; Total block memory implementation bits      ; 0                     ; 0                            ; 0                              ;
 ;                                             ;                       ;                              ;                                ;
 ; Connections                                 ;                       ;                              ;                                ;
-;     -- Input Connections                    ; 4                     ; 34                           ; 0                              ;
-;     -- Registered Input Connections         ; 0                     ; 30                           ; 0                              ;
-;     -- Output Connections                   ; 34                    ; 4                            ; 0                              ;
+;     -- Input Connections                    ; 4                     ; 37                           ; 0                              ;
+;     -- Registered Input Connections         ; 0                     ; 32                           ; 0                              ;
+;     -- Output Connections                   ; 37                    ; 4                            ; 0                              ;
 ;     -- Registered Output Connections        ; 0                     ; 4                            ; 0                              ;
 ;                                             ;                       ;                              ;                                ;
 ; Internal Connections                        ;                       ;                              ;                                ;
-;     -- Total Connections                    ; 1146                  ; 433                          ; 0                              ;
-;     -- Registered Connections               ; 54                    ; 60                           ; 0                              ;
+;     -- Total Connections                    ; 1149                  ; 796                          ; 0                              ;
+;     -- Registered Connections               ; 54                    ; 68                           ; 0                              ;
 ;                                             ;                       ;                              ;                                ;
 ; External Connections                        ;                       ;                              ;                                ;
-;     -- Top                                  ; 0                     ; 38                           ; 0                              ;
-;     -- led_wrapper:led_wrapper_inst         ; 38                    ; 0                            ; 0                              ;
+;     -- Top                                  ; 0                     ; 41                           ; 0                              ;
+;     -- led_wrapper:led_wrapper_inst         ; 41                    ; 0                            ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                     ; 0                            ; 0                              ;
 ;                                             ;                       ;                              ;                                ;
 ; Partition Interface                         ;                       ;                              ;                                ;
@@ -375,16 +375,16 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Estimate of Logic utilization (ALMs needed) ; 217                ;
+; Estimate of Logic utilization (ALMs needed) ; 274                ;
 ;                                             ;                    ;
-; Combinational ALUT usage for logic          ; 286                ;
-;     -- 7 input functions                    ; 1                  ;
-;     -- 6 input functions                    ; 115                ;
-;     -- 5 input functions                    ; 34                 ;
-;     -- 4 input functions                    ; 28                 ;
-;     -- <=3 input functions                  ; 108                ;
+; Combinational ALUT usage for logic          ; 357                ;
+;     -- 7 input functions                    ; 0                  ;
+;     -- 6 input functions                    ; 158                ;
+;     -- 5 input functions                    ; 42                 ;
+;     -- 4 input functions                    ; 39                 ;
+;     -- <=3 input functions                  ; 118                ;
 ;                                             ;                    ;
-; Dedicated logic registers                   ; 84                 ;
+; Dedicated logic registers                   ; 86                 ;
 ;                                             ;                    ;
 ; I/O pins                                    ; 57                 ;
 ;                                             ;                    ;
@@ -392,8 +392,8 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ;                                             ;                    ;
 ; Maximum fan-out node                        ; system_clock~input ;
 ; Maximum fan-out                             ; 55                 ;
-; Total fan-out                               ; 1541               ;
-; Average fan-out                             ; 3.18               ;
+; Total fan-out                               ; 1904               ;
+; Average fan-out                             ; 3.41               ;
 +---------------------------------------------+--------------------+
 
 
@@ -402,8 +402,8 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Partition Merge
-    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Thu Jun 11 15:49:49 2015
+    Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+    Info: Processing started: Mon Jun 15 19:15:42 2015
 Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off PR_test -c ReconfigRev --merge=on
 Info (35006): Using previously generated Fitter netlist for partition "Top"
 Info (35007): Using synthesis netlist for partition "led_wrapper:led_wrapper_inst"
@@ -414,14 +414,14 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "PR_reset_button"
     Warning (15610): No output dependent on input pin "PR1_button"
     Warning (15610): No output dependent on input pin "dir_switch_1"
-Info (21057): Implemented 404 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 477 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 347 logic cells
+    Info (21061): Implemented 420 logic cells
 Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 809 megabytes
-    Info: Processing ended: Thu Jun 11 15:49:51 2015
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 767 megabytes
+    Info: Processing ended: Mon Jun 15 19:15:46 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

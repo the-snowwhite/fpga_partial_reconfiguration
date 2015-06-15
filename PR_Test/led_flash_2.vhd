@@ -8,53 +8,72 @@ entity led_flash is
        leds	: out STD_LOGIC_VECTOR (3 downto 0));
 end led_flash;
 
-architecture behv of led_flash is
+architecture behavior of led_flash is
+signal max_count:integer := 150000000;
+signal count:integer := 0;
+begin
+process(clk) 
+variable count : natural range 0 to max_count;
+begin
+if (clk='1') then count := count + 1;
+	if (dir='1') then
+		if count < max_count/7 then
+				leds <="0001";  -- 'r'
 
-	constant max_count : natural := 50000000;
+				--count := count + 1;		
+		elsif (count > max_count/7 and count < 2*(max_count/7)) then
+				leds <="0011";  -- 'r'
+
+				--count := count + 1;
+		elsif (count > 2*(max_count/7) and count < 3*(max_count/7)) then
+				leds <="0111";  -- 'r'
+
+				--count := count + 1;
+		elsif (count > 3*(max_count/7) and count < 4*(max_count/7)) then
+				leds <="1111";  -- 'r'
 		 
- 
-begin 
-	led_flash: process(clk)
-		variable count : natural range 0 to max_count;
-			begin
-				if rising_edge(clk) then count := count +1;
-					if dir = '1' then
-						if (count < max_count/5) then													-- bleibt hier hängen und kommt nicht mehr raus.
-							leds <= "0001";
---							count := count + 1;
-						elsif (count > max_count/5 and count < 2*(max_count/5)) then
-							leds <= "0010";
---							count := count + 1;
-						elsif (count > 2*(max_count/5) and count < 3*(max_count/5)) then
-							leds <= "0100";
---							count := count + 1;
-						elsif (count > 3*(max_count/5) and count < 4*(max_count/5)) then
-							leds <= "1000";
---							count := count + 1;
-						else
-							leds <= "0001";
-							count := 0;
-						end if;		
-					else
-						if count < max_count/5 then													-- bleibt hier hängen und kommt nicht mehr raus.
---							count := count + 1;
-							leds <= "1000";
-						elsif (count > max_count/5 and count < 2*(max_count/5)) then
-							leds <= "0100";
---							count := count + 1;
-						elsif (count > 2*(max_count/5) and count < 3*(max_count/5)) then
-							leds <= "0010";
---							count := count + 1;
-						elsif (count > 3*(max_count/5) and count < 4*(max_count/5)) then
-							leds <= "0001";
---							count := count + 1;
-						else
-							leds <= "1000";
-							count := 0;
-						end if;			 
-					end if;
-				end if; 
-	end process led_flash; 
+				--count := count + 1;
+		elsif (count > 4*(max_count/7) and count < 5*(max_count/7)) then
+				leds <="1110";  -- 'r'
+		 
+				
+		elsif (count > 5*(max_count/7)and count < 6*(max_count/7)) then
+				leds <="1100";  -- 'r'
+		 
+		elsif (count > 6*(max_count/7)) then
+				leds <="1000";  -- 'r'
+				count :=0;		
+		end if;
+	elsif (dir='0') then
+		if count < max_count/7 then
+				leds <="0011";  -- 'r'
 
-end behv;
-	 
+				--count := count + 1;		
+		elsif (count > max_count/7 and count < 2*(max_count/7)) then
+				leds <="0110";  -- 'r'
+
+				--count := count + 1;
+		elsif (count > 2*(max_count/7) and count < 3*(max_count/7)) then
+				leds <="1100";  -- 'r'
+
+				--count := count + 1;
+		elsif (count > 3*(max_count/7) and count < 4*(max_count/7)) then
+				leds <="1001";  -- 'r'
+		 
+				--count := count + 1;
+		elsif (count > 4*(max_count/7) and count < 5*(max_count/7)) then
+				leds <="1010";  -- 'r'
+				
+		elsif (count > 5*(max_count/7)and count < 6*(max_count/7)) then
+				leds <="0101";  -- 'r'
+		 
+		elsif (count > 6*(max_count/7)) then
+				leds <="0000";  -- 'r'
+				count :=0;		
+		end if;		
+	end if;
+end if;
+end process;
+
+end behavior;
+

@@ -1,6 +1,6 @@
 Fitter report for PR_test
-Thu Jun 11 15:35:15 2015
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+Mon Jun 15 21:42:33 2015
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
 ---------------------
@@ -29,23 +29,24 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
  21. Delay Chain Summary
  22. Pad To Core Delay Chain Fanout
  23. Control Signals
- 24. Routing Usage Summary
- 25. I/O Rules Summary
- 26. I/O Rules Details
- 27. I/O Rules Matrix
- 28. Fitter Device Options
- 29. Operating Settings and Conditions
- 30. Estimated Delay Added for Hold Timing Summary
- 31. Estimated Delay Added for Hold Timing Details
- 32. Fitter Messages
- 33. Fitter Suppressed Messages
+ 24. Non-Global High Fan-Out Signals
+ 25. Routing Usage Summary
+ 26. I/O Rules Summary
+ 27. I/O Rules Details
+ 28. I/O Rules Matrix
+ 29. Fitter Device Options
+ 30. Operating Settings and Conditions
+ 31. Estimated Delay Added for Hold Timing Summary
+ 32. Estimated Delay Added for Hold Timing Details
+ 33. Fitter Messages
+ 34. Fitter Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -62,30 +63,29 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Fitter Summary                                                                ;
-+---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Jun 11 15:35:15 2015       ;
-; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
-; Revision Name                   ; PR_test                                     ;
-; Top-level Entity Name           ; PR_test_top                                 ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CSEMA5F31C6                                ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 161 / 32,070 ( < 1 % )                      ;
-; Total registers                 ; 92                                          ;
-; Total pins                      ; 57 / 457 ( 12 % )                           ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
-; Total RAM Blocks                ; 0 / 397 ( 0 % )                             ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------+
+; Fitter Summary                                                               ;
++---------------------------------+--------------------------------------------+
+; Fitter Status                   ; Successful - Mon Jun 15 21:42:33 2015      ;
+; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
+; Revision Name                   ; PR_test                                    ;
+; Top-level Entity Name           ; PR_test_top                                ;
+; Family                          ; Cyclone V                                  ;
+; Device                          ; 5CSEMA5F31C6                               ;
+; Timing Models                   ; Final                                      ;
+; Logic utilization (in ALMs)     ; 162 / 32,070 ( < 1 % )                     ;
+; Total registers                 ; 89                                         ;
+; Total pins                      ; 53 / 457 ( 12 % )                          ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                      ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                             ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
++---------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -96,6 +96,7 @@ agreement for further details.
 ; Device                                                                     ; 5CSEMA5F31C6                          ;                                       ;
 ; Minimum Core Junction Temperature                                          ; 0                                     ;                                       ;
 ; Maximum Core Junction Temperature                                          ; 85                                    ;                                       ;
+; Device I/O Standard                                                        ; 2.5 V                                 ;                                       ;
 ; Use smart compilation                                                      ; Off                                   ; Off                                   ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                                    ; On                                    ;
 ; Enable compact report table                                                ; Off                                   ; Off                                   ;
@@ -151,81 +152,72 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.55        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.30        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  18.4%      ;
+;     Processor 2            ;  30.3%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------+
-; I/O Assignment Warnings                         ;
-+-----------------+-------------------------------+
-; Pin Name        ; Reason                        ;
-+-----------------+-------------------------------+
-; PR_done_led     ; Incomplete set of assignments ;
-; PR_error_led    ; Incomplete set of assignments ;
-; LED[0]          ; Incomplete set of assignments ;
-; LED[1]          ; Incomplete set of assignments ;
-; LED[2]          ; Incomplete set of assignments ;
-; LED[3]          ; Incomplete set of assignments ;
-; LED[4]          ; Incomplete set of assignments ;
-; LED[5]          ; Incomplete set of assignments ;
-; LED[6]          ; Incomplete set of assignments ;
-; LED[7]          ; Incomplete set of assignments ;
-; disp_hex0[0]    ; Incomplete set of assignments ;
-; disp_hex0[1]    ; Incomplete set of assignments ;
-; disp_hex0[2]    ; Incomplete set of assignments ;
-; disp_hex0[3]    ; Incomplete set of assignments ;
-; disp_hex0[4]    ; Incomplete set of assignments ;
-; disp_hex0[5]    ; Incomplete set of assignments ;
-; disp_hex0[6]    ; Incomplete set of assignments ;
-; disp_hex1[0]    ; Incomplete set of assignments ;
-; disp_hex1[1]    ; Incomplete set of assignments ;
-; disp_hex1[2]    ; Incomplete set of assignments ;
-; disp_hex1[3]    ; Incomplete set of assignments ;
-; disp_hex1[4]    ; Incomplete set of assignments ;
-; disp_hex1[5]    ; Incomplete set of assignments ;
-; disp_hex1[6]    ; Incomplete set of assignments ;
-; disp_hex2[0]    ; Incomplete set of assignments ;
-; disp_hex2[1]    ; Incomplete set of assignments ;
-; disp_hex2[2]    ; Incomplete set of assignments ;
-; disp_hex2[3]    ; Incomplete set of assignments ;
-; disp_hex2[4]    ; Incomplete set of assignments ;
-; disp_hex2[5]    ; Incomplete set of assignments ;
-; disp_hex2[6]    ; Incomplete set of assignments ;
-; disp_hex3[0]    ; Incomplete set of assignments ;
-; disp_hex3[1]    ; Incomplete set of assignments ;
-; disp_hex3[2]    ; Incomplete set of assignments ;
-; disp_hex3[3]    ; Incomplete set of assignments ;
-; disp_hex3[4]    ; Incomplete set of assignments ;
-; disp_hex3[5]    ; Incomplete set of assignments ;
-; disp_hex3[6]    ; Incomplete set of assignments ;
-; disp_hex4[0]    ; Incomplete set of assignments ;
-; disp_hex4[1]    ; Incomplete set of assignments ;
-; disp_hex4[2]    ; Incomplete set of assignments ;
-; disp_hex4[3]    ; Incomplete set of assignments ;
-; disp_hex4[4]    ; Incomplete set of assignments ;
-; disp_hex4[5]    ; Incomplete set of assignments ;
-; disp_hex4[6]    ; Incomplete set of assignments ;
-; disp_hex5[0]    ; Incomplete set of assignments ;
-; disp_hex5[1]    ; Incomplete set of assignments ;
-; disp_hex5[2]    ; Incomplete set of assignments ;
-; disp_hex5[3]    ; Incomplete set of assignments ;
-; disp_hex5[4]    ; Incomplete set of assignments ;
-; disp_hex5[5]    ; Incomplete set of assignments ;
-; disp_hex5[6]    ; Incomplete set of assignments ;
-; PR_reset_button ; Incomplete set of assignments ;
-; PR1_button      ; Incomplete set of assignments ;
-; dir_switch_1    ; Incomplete set of assignments ;
-; system_clock    ; Incomplete set of assignments ;
-; dir_switch_2    ; Incomplete set of assignments ;
-+-----------------+-------------------------------+
++-----------------------------------------------------+
+; I/O Assignment Warnings                             ;
++--------------+--------------------------------------+
+; Pin Name     ; Reason                               ;
++--------------+--------------------------------------+
+; PR_done_led  ; Missing drive strength and slew rate ;
+; PR_error_led ; Missing drive strength and slew rate ;
+; LED[0]       ; Missing drive strength and slew rate ;
+; LED[1]       ; Missing drive strength and slew rate ;
+; LED[2]       ; Missing drive strength and slew rate ;
+; LED[3]       ; Missing drive strength and slew rate ;
+; disp_hex0[0] ; Missing drive strength and slew rate ;
+; disp_hex0[1] ; Missing drive strength and slew rate ;
+; disp_hex0[2] ; Missing drive strength and slew rate ;
+; disp_hex0[3] ; Missing drive strength and slew rate ;
+; disp_hex0[4] ; Missing drive strength and slew rate ;
+; disp_hex0[5] ; Missing drive strength and slew rate ;
+; disp_hex0[6] ; Missing drive strength and slew rate ;
+; disp_hex1[0] ; Missing drive strength and slew rate ;
+; disp_hex1[1] ; Missing drive strength and slew rate ;
+; disp_hex1[2] ; Missing drive strength and slew rate ;
+; disp_hex1[3] ; Missing drive strength and slew rate ;
+; disp_hex1[4] ; Missing drive strength and slew rate ;
+; disp_hex1[5] ; Missing drive strength and slew rate ;
+; disp_hex1[6] ; Missing drive strength and slew rate ;
+; disp_hex2[0] ; Missing drive strength and slew rate ;
+; disp_hex2[1] ; Missing drive strength and slew rate ;
+; disp_hex2[2] ; Missing drive strength and slew rate ;
+; disp_hex2[3] ; Missing drive strength and slew rate ;
+; disp_hex2[4] ; Missing drive strength and slew rate ;
+; disp_hex2[5] ; Missing drive strength and slew rate ;
+; disp_hex2[6] ; Missing drive strength and slew rate ;
+; disp_hex3[0] ; Missing drive strength and slew rate ;
+; disp_hex3[1] ; Missing drive strength and slew rate ;
+; disp_hex3[2] ; Missing drive strength and slew rate ;
+; disp_hex3[3] ; Missing drive strength and slew rate ;
+; disp_hex3[4] ; Missing drive strength and slew rate ;
+; disp_hex3[5] ; Missing drive strength and slew rate ;
+; disp_hex3[6] ; Missing drive strength and slew rate ;
+; disp_hex4[0] ; Missing drive strength and slew rate ;
+; disp_hex4[1] ; Missing drive strength and slew rate ;
+; disp_hex4[2] ; Missing drive strength and slew rate ;
+; disp_hex4[3] ; Missing drive strength and slew rate ;
+; disp_hex4[4] ; Missing drive strength and slew rate ;
+; disp_hex4[5] ; Missing drive strength and slew rate ;
+; disp_hex4[6] ; Missing drive strength and slew rate ;
+; disp_hex5[0] ; Missing drive strength and slew rate ;
+; disp_hex5[1] ; Missing drive strength and slew rate ;
+; disp_hex5[2] ; Missing drive strength and slew rate ;
+; disp_hex5[3] ; Missing drive strength and slew rate ;
+; disp_hex5[4] ; Missing drive strength and slew rate ;
+; disp_hex5[5] ; Missing drive strength and slew rate ;
+; disp_hex5[6] ; Missing drive strength and slew rate ;
++--------------+--------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -233,14 +225,11 @@ agreement for further details.
 +-------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+-----------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
 ; Node                                                                                                  ; Action     ; Operation                                         ; Reason                   ; Node Port ; Node Port Name ; Destination Node                                                                                                ; Destination Port ; Destination Port Name ;
 +-------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+-----------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[6]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[6]~DUPLICATE  ;                  ;                       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[7]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[7]~DUPLICATE  ;                  ;                       ;
 ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[10] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[10]~DUPLICATE ;                  ;                       ;
 ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[12]~DUPLICATE ;                  ;                       ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[13] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[13]~DUPLICATE ;                  ;                       ;
 ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[14] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[14]~DUPLICATE ;                  ;                       ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[15] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[15]~DUPLICATE ;                  ;                       ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[16] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[16]~DUPLICATE ;                  ;                       ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[19] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[19]~DUPLICATE ;                  ;                       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[17] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[17]~DUPLICATE ;                  ;                       ;
 +-------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+-----------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
 
 
@@ -250,12 +239,12 @@ agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 434 ) ; 0.00 % ( 0 / 434 )         ; 0.00 % ( 0 / 434 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 434 ) ; 0.00 % ( 0 / 434 )         ; 0.00 % ( 0 / 434 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 426 ) ; 0.00 % ( 0 / 426 )         ; 0.00 % ( 0 / 426 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 426 ) ; 0.00 % ( 0 / 426 )         ; 0.00 % ( 0 / 426 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 363 ) ; 0.00 % ( 0 / 363 )         ; 0.00 % ( 0 / 363 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 363 ) ; 0.00 % ( 0 / 363 )         ; 0.00 % ( 0 / 363 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 359 ) ; 0.00 % ( 0 / 359 )         ; 0.00 % ( 0 / 359 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 359 ) ; 0.00 % ( 0 / 359 )         ; 0.00 % ( 0 / 359 )       ;
 +---------------------+--------------------+----------------------------+--------------------------+
 
 
@@ -275,7 +264,7 @@ agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 363 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 355 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; led_wrapper:led_wrapper_inst   ; 0.00 % ( 0 / 71 )     ; N/A                     ; Post-Synthesis    ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
@@ -286,10 +275,10 @@ agreement for further details.
 +------------------------------+------------------------------+------------------------+-----------------------+---------------------+-------+
 ; Partition 1                  ; Partition 2                  ; Preservation Requested ; Preservation Achieved ; Preservation Method ; Notes ;
 +------------------------------+------------------------------+------------------------+-----------------------+---------------------+-------+
-; Top                          ; Top                          ; 0.00 % ( 0 / 1956 )    ; 0.00 % ( 0 / 1956 )   ; N/A                 ;       ;
+; Top                          ; Top                          ; 0.00 % ( 0 / 1942 )    ; 0.00 % ( 0 / 1942 )   ; N/A                 ;       ;
 ; led_wrapper:led_wrapper_inst ; Top                          ; 0.00 % ( 0 / 8 )       ; 0.00 % ( 0 / 8 )      ; N/A                 ;       ;
 ; Top                          ; led_wrapper:led_wrapper_inst ; 0.00 % ( 0 / 8 )       ; 0.00 % ( 0 / 8 )      ; N/A                 ;       ;
-; led_wrapper:led_wrapper_inst ; led_wrapper:led_wrapper_inst ; 0.00 % ( 0 / 220 )     ; 0.00 % ( 0 / 220 )    ; N/A                 ;       ;
+; led_wrapper:led_wrapper_inst ; led_wrapper:led_wrapper_inst ; 0.00 % ( 0 / 214 )     ; 0.00 % ( 0 / 214 )    ; N/A                 ;       ;
 +------------------------------+------------------------------+------------------------+-----------------------+---------------------+-------+
 Note: The table contains rows with duplicate information to facilitate sorting by Partition.
 
@@ -307,7 +296,7 @@ Note: The effective origin and size are the region properties taking into accoun
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.pin.
+The pin-out file can be found in C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -315,14 +304,14 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 161 / 32,070       ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 161                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 174 / 32,070       ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 23                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 132                ;       ;
-;         [c] ALMs used for registers                         ; 19                 ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 162 / 32,070       ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 162                ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 178 / 32,070       ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 27                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 136                ;       ;
+;         [c] ALMs used for registers                         ; 15                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 13 / 32,070        ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 16 / 32,070        ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -331,8 +320,8 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 26 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 26                 ;       ;
+; Total LABs:  partially or completely used                   ; 27 / 3,207         ; < 1 % ;
+;     -- Logic LABs                                           ; 27                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 238                ;       ;
@@ -341,17 +330,17 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ;     -- 5 input functions                                    ; 29                 ;       ;
 ;     -- 4 input functions                                    ; 24                 ;       ;
 ;     -- <=3 input functions                                  ; 98                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 8                  ;       ;
-; Dedicated logic registers                                   ; 92                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 6                  ;       ;
+; Dedicated logic registers                                   ; 89                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 84 / 64,140        ; < 1 % ;
-;         -- Secondary logic registers                        ; 8 / 64,140         ; < 1 % ;
+;         -- Secondary logic registers                        ; 5 / 64,140         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 84                 ;       ;
-;         -- Routing optimization registers                   ; 8                  ;       ;
+;         -- Routing optimization registers                   ; 5                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
-; I/O pins                                                    ; 57 / 457           ; 12 %  ;
+; I/O pins                                                    ; 53 / 457           ; 12 %  ;
 ;     -- Clock pins                                           ; 4 / 8              ; 50 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 21             ; 0 %   ;
 ;                                                             ;                    ;       ;
@@ -404,11 +393,11 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.2% / 0.2% / 0.2% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 3.3% / 3.2% / 3.3% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 3.7% / 3.7% / 3.5% ;       ;
 ; Maximum fan-out                                             ; 55                 ;       ;
 ; Highest non-global fan-out                                  ; 55                 ;       ;
-; Total fan-out                                               ; 1335               ;       ;
-; Average fan-out                                             ; 2.95               ;       ;
+; Total fan-out                                               ; 1320               ;       ;
+; Average fan-out                                             ; 3.01               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -417,14 +406,14 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 +-------------------------------------------------------------+-----------------------+------------------------------+
 ; Statistic                                                   ; Root Region           ; led_wrapper:led_wrapper_inst ;
 +-------------------------------------------------------------+-----------------------+------------------------------+
-; Logic utilization (ALMs needed / total ALMs in region)      ; 140 / 32070 ( < 1 % ) ; 22 / 900 ( 2 % )             ;
-; ALMs needed [=A-B+C]                                        ; 140                   ; 22                           ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 143 / 32070 ( < 1 % ) ; 31 / 900 ( 3 % )             ;
-;         [a] ALMs used for LUT logic and registers           ; 16                    ; 7                            ;
-;         [b] ALMs used for LUT logic                         ; 116                   ; 16                           ;
-;         [c] ALMs used for registers                         ; 11                    ; 8                            ;
+; Logic utilization (ALMs needed / total ALMs in region)      ; 142 / 32070 ( < 1 % ) ; 23 / 900 ( 3 % )             ;
+; ALMs needed [=A-B+C]                                        ; 142                   ; 23                           ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 147 / 32070 ( < 1 % ) ; 31 / 900 ( 3 % )             ;
+;         [a] ALMs used for LUT logic and registers           ; 20                    ; 7                            ;
+;         [b] ALMs used for LUT logic                         ; 120                   ; 16                           ;
+;         [c] ALMs used for registers                         ; 7                     ; 8                            ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                            ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 3 / 32070 ( < 1 % )   ; 9 / 900 ( 1 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 32070 ( < 1 % )   ; 8 / 900 ( < 1 % )            ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )     ; 0 / 900 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                            ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                            ;
@@ -433,8 +422,8 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ;                                                             ;                       ;                              ;
 ; Difficulty packing design                                   ; Low                   ; Low                          ;
 ;                                                             ;                       ;                              ;
-; Total LABs:  partially or completely used                   ; 21 / 3207 ( < 1 % )   ; 5 / 90 ( 6 % )               ;
-;     -- Logic LABs                                           ; 21                    ; 5                            ;
+; Total LABs:  partially or completely used                   ; 21 / 3207 ( < 1 % )   ; 6 / 90 ( 7 % )               ;
+;     -- Logic LABs                                           ; 21                    ; 6                            ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                            ;
 ;                                                             ;                       ;                              ;
 ; Combinational ALUT usage for logic                          ; 192                   ; 46                           ;
@@ -443,7 +432,7 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ;     -- 5 input functions                                    ; 25                    ; 4                            ;
 ;     -- 4 input functions                                    ; 20                    ; 4                            ;
 ;     -- <=3 input functions                                  ; 61                    ; 37                           ;
-; Combinational ALUT usage for route-throughs                 ; 1                     ; 7                            ;
+; Combinational ALUT usage for route-throughs                 ; 0                     ; 6                            ;
 ; Memory ALUT usage                                           ; 0                     ; 0                            ;
 ;     -- 64-address deep                                      ; 0                     ; 0                            ;
 ;     -- 32-address deep                                      ; 0                     ; 0                            ;
@@ -451,14 +440,14 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ; Dedicated logic registers                                   ; 0                     ; 0                            ;
 ;     -- By type:                                             ;                       ;                              ;
 ;         -- Primary logic registers                          ; 54 / 64140 ( < 1 % )  ; 30 / 1800 ( 2 % )            ;
-;         -- Secondary logic registers                        ; 0 / 64140 ( 0 % )     ; 8 / 1800 ( < 1 % )           ;
+;         -- Secondary logic registers                        ; 0 / 64140 ( 0 % )     ; 5 / 1800 ( < 1 % )           ;
 ;     -- By function:                                         ;                       ;                              ;
 ;         -- Design implementation registers                  ; 54                    ; 30                           ;
-;         -- Routing optimization registers                   ; 0                     ; 8                            ;
+;         -- Routing optimization registers                   ; 0                     ; 5                            ;
 ;                                                             ;                       ;                              ;
 ;                                                             ;                       ;                              ;
 ; Virtual pins                                                ; 0                     ; 0                            ;
-; I/O pins                                                    ; 57                    ; 0                            ;
+; I/O pins                                                    ; 53                    ; 0                            ;
 ; I/O registers                                               ; 0                     ; 0                            ;
 ; Total block memory bits                                     ; 0                     ; 0                            ;
 ; Total block memory implementation bits                      ; 0                     ; 0                            ;
@@ -470,7 +459,7 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ;     -- Registered Output Connections                        ; 1                     ; 0                            ;
 ;                                                             ;                       ;                              ;
 ; Internal Connections                                        ;                       ;                              ;
-;     -- Total Connections                                    ; 1108                  ; 233                          ;
+;     -- Total Connections                                    ; 1103                  ; 223                          ;
 ;     -- Registered Connections                               ; 54                    ; 65                           ;
 ;                                                             ;                       ;                              ;
 ; External Connections                                        ;                       ;                              ;
@@ -489,14 +478,14 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 +-------------------------------------------------------------+-----------------------+------------------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; led_wrapper:led_wrapper_inst ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+------------------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 143 / 32070 ( < 1 % ) ; 19 / 32070 ( < 1 % )         ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 143                   ; 19                           ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 146 / 32070 ( < 1 % ) ; 28 / 32070 ( < 1 % )         ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 16                    ; 7                            ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 119                   ; 13                           ; 0                              ;
-;         [c] ALMs used for registers                         ; 11                    ; 8                            ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 145 / 32070 ( < 1 % ) ; 20 / 32070 ( < 1 % )         ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 145                   ; 20                           ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 150 / 32070 ( < 1 % ) ; 28 / 32070 ( < 1 % )         ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 20                    ; 7                            ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 123                   ; 13                           ; 0                              ;
+;         [c] ALMs used for registers                         ; 7                     ; 8                            ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                            ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 3 / 32070 ( < 1 % )   ; 9 / 32070 ( < 1 % )          ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 32070 ( < 1 % )   ; 8 / 32070 ( < 1 % )          ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )     ; 0 / 32070 ( 0 % )            ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                            ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                            ; 0                              ;
@@ -505,8 +494,8 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ;                                                             ;                       ;                              ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                          ; Low                            ;
 ;                                                             ;                       ;                              ;                                ;
-; Total LABs:  partially or completely used                   ; 24 / 3207 ( < 1 % )   ; 3 / 3207 ( < 1 % )           ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 24                    ; 3                            ; 0                              ;
+; Total LABs:  partially or completely used                   ; 25 / 3207 ( < 1 % )   ; 3 / 3207 ( < 1 % )           ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 25                    ; 3                            ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                            ; 0                              ;
 ;                                                             ;                       ;                              ;                                ;
 ; Combinational ALUT usage for logic                          ; 198                   ; 40                           ; 0                              ;
@@ -515,7 +504,7 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ;     -- 5 input functions                                    ; 25                    ; 4                            ; 0                              ;
 ;     -- 4 input functions                                    ; 20                    ; 4                            ; 0                              ;
 ;     -- <=3 input functions                                  ; 67                    ; 31                           ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 1                     ; 7                            ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 0                     ; 6                            ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                            ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                            ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                            ; 0                              ;
@@ -523,36 +512,36 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ; Dedicated logic registers                                   ; 0                     ; 0                            ; 0                              ;
 ;     -- By type:                                             ;                       ;                              ;                                ;
 ;         -- Primary logic registers                          ; 54 / 64140 ( < 1 % )  ; 30 / 64140 ( < 1 % )         ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 0 / 64140 ( 0 % )     ; 8 / 64140 ( < 1 % )          ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 0 / 64140 ( 0 % )     ; 5 / 64140 ( < 1 % )          ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                              ;                                ;
 ;         -- Design implementation registers                  ; 54                    ; 30                           ; 0                              ;
-;         -- Routing optimization registers                   ; 0                     ; 8                            ; 0                              ;
+;         -- Routing optimization registers                   ; 0                     ; 5                            ; 0                              ;
 ;                                                             ;                       ;                              ;                                ;
 ;                                                             ;                       ;                              ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                            ; 0                              ;
-; I/O pins                                                    ; 57                    ; 0                            ; 0                              ;
+; I/O pins                                                    ; 53                    ; 0                            ; 0                              ;
 ; I/O registers                                               ; 0                     ; 0                            ; 0                              ;
 ; Total block memory bits                                     ; 0                     ; 0                            ; 0                              ;
 ; Total block memory implementation bits                      ; 0                     ; 0                            ; 0                              ;
 ;                                                             ;                       ;                              ;                                ;
 ; Connections                                                 ;                       ;                              ;                                ;
-;     -- Input Connections                                    ; 4                     ; 39                           ; 0                              ;
-;     -- Registered Input Connections                         ; 0                     ; 38                           ; 0                              ;
-;     -- Output Connections                                   ; 39                    ; 4                            ; 0                              ;
+;     -- Input Connections                                    ; 4                     ; 36                           ; 0                              ;
+;     -- Registered Input Connections                         ; 0                     ; 35                           ; 0                              ;
+;     -- Output Connections                                   ; 36                    ; 4                            ; 0                              ;
 ;     -- Registered Output Connections                        ; 0                     ; 4                            ; 0                              ;
 ;                                                             ;                       ;                              ;                                ;
 ; Internal Connections                                        ;                       ;                              ;                                ;
-;     -- Total Connections                                    ; 1151                  ; 227                          ; 0                              ;
-;     -- Registered Connections                               ; 54                    ; 103                          ; 0                              ;
+;     -- Total Connections                                    ; 1143                  ; 217                          ; 0                              ;
+;     -- Registered Connections                               ; 54                    ; 100                          ; 0                              ;
 ;                                                             ;                       ;                              ;                                ;
 ; External Connections                                        ;                       ;                              ;                                ;
-;     -- Top                                                  ; 0                     ; 43                           ; 0                              ;
-;     -- led_wrapper:led_wrapper_inst                         ; 43                    ; 0                            ; 0                              ;
+;     -- Top                                                  ; 0                     ; 40                           ; 0                              ;
+;     -- led_wrapper:led_wrapper_inst                         ; 40                    ; 0                            ; 0                              ;
 ;     -- hard_block:auto_generated_inst                       ; 0                     ; 0                            ; 0                              ;
 ;                                                             ;                       ;                              ;                                ;
 ; Partition Interface                                         ;                       ;                              ;                                ;
 ;     -- Input Ports                                          ; 5                     ; 2                            ; 0                              ;
-;     -- Output Ports                                         ; 52                    ; 4                            ; 0                              ;
+;     -- Output Ports                                         ; 48                    ; 4                            ; 0                              ;
 ;     -- Bidir Ports                                          ; 0                     ; 0                            ; 0                              ;
 ;                                                             ;                       ;                              ;                                ;
 ; Registered Ports                                            ;                       ;                              ;                                ;
@@ -571,17 +560,17 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 +-------------------------------------------------------------+-----------------------+------------------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                                                     ;
-+-----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
-+-----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; PR1_button      ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; PR_reset_button ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; dir_switch_1    ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; dir_switch_2    ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; system_clock    ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 55                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-+-----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                                         ;
++-----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
+; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ;
++-----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
+; PR1_button      ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ;
+; PR_reset_button ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ;
+; dir_switch_1    ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ;
+; dir_switch_2    ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ;
+; system_clock    ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 55                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ;
++-----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -593,10 +582,6 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ; LED[1]       ; Y19   ; 4A       ; 84           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; LED[2]       ; W19   ; 4A       ; 80           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; LED[3]       ; W17   ; 4A       ; 60           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; LED[4]       ; V18   ; 4A       ; 80           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; LED[5]       ; V17   ; 4A       ; 60           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; LED[6]       ; W16   ; 4A       ; 52           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; LED[7]       ; V16   ; 4A       ; 52           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; PR_done_led  ; W21   ; 5A       ; 89           ; 8            ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; PR_error_led ; Y21   ; 5A       ; 89           ; 6            ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; disp_hex0[0] ; AE26  ; 5A       ; 89           ; 8            ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
@@ -653,7 +638,7 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ; B1L      ; 0 / 0 ( -- )      ; --            ; --           ; --            ;
 ; 3A       ; 2 / 32 ( 6 % )    ; 2.5V          ; --           ; 2.5V          ;
 ; 3B       ; 3 / 48 ( 6 % )    ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 7 / 80 ( 9 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 3 / 80 ( 4 % )    ; 2.5V          ; --           ; 2.5V          ;
 ; 5A       ; 32 / 32 ( 100 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 5B       ; 13 / 16 ( 81 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 6B       ; 0 / 44 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
@@ -1492,9 +1477,9 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ; V13      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; V14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; V16      ; 138        ; 4A       ; LED[7]                          ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; V17      ; 154        ; 4A       ; LED[5]                          ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; V18      ; 194        ; 4A       ; LED[4]                          ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; V16      ; 138        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; V17      ; 154        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; V18      ; 194        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V19      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V20      ; 292        ; 6B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; V21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1522,7 +1507,7 @@ The pin-out file can be found in F:/Quartus/workspace/fpga_partial_reconfigurati
 ; W13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; W14      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; W15      ; 130        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; W16      ; 136        ; 4A       ; LED[6]                          ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; W16      ; 136        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W17      ; 152        ; 4A       ; LED[3]                          ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; W18      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; W19      ; 192        ; 4A       ; LED[2]                          ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -1576,11 +1561,11 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node            ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                 ; Library Name ;
 +---------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
-; |PR_test_top                          ; 161.0 (0.5)          ; 174.0 (0.5)                      ; 13.0 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 238 (1)             ; 92 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 57   ; 0            ; |PR_test_top                                                                                        ; work         ;
-;    |freeze_region:freeze_region_inst| ; 23.5 (0.0)           ; 31.5 (0.5)                       ; 8.0 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 46 (0)              ; 39 (1)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst                                                       ; work         ;
-;       |led_wrapper:led_wrapper_inst|  ; 23.5 (3.7)           ; 31.0 (3.8)                       ; 7.5 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 46 (8)              ; 38 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst                          ; work         ;
-;          |led_flash:led_flash_inst|   ; 19.8 (19.8)          ; 27.3 (27.3)                      ; 7.4 (7.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (38)             ; 38 (38)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst ; work         ;
-;    |ticker_disp:ticker_inst|          ; 137.0 (137.0)        ; 142.0 (142.0)                    ; 5.0 (5.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 191 (191)           ; 53 (53)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |PR_test_top|ticker_disp:ticker_inst                                                                ; work         ;
+; |PR_test_top                          ; 162.0 (0.5)          ; 178.0 (0.5)                      ; 16.0 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 238 (1)             ; 89 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 53   ; 0            ; |PR_test_top                                                                                        ; work         ;
+;    |freeze_region:freeze_region_inst| ; 23.5 (0.0)           ; 31.5 (0.5)                       ; 8.0 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 46 (0)              ; 36 (1)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst                                                       ; work         ;
+;       |led_wrapper:led_wrapper_inst|  ; 23.5 (3.8)           ; 31.0 (3.8)                       ; 7.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 46 (8)              ; 35 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst                          ; work         ;
+;          |led_flash:led_flash_inst|   ; 19.7 (19.7)          ; 27.3 (27.3)                      ; 7.6 (7.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (38)             ; 35 (35)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst ; work         ;
+;    |ticker_disp:ticker_inst|          ; 138.0 (138.0)        ; 146.0 (146.0)                    ; 8.0 (8.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 191 (191)           ; 53 (53)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |PR_test_top|ticker_disp:ticker_inst                                                                ; work         ;
 +---------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1596,10 +1581,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LED[1]          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; LED[2]          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; LED[3]          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; LED[4]          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; LED[5]          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; LED[6]          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; LED[7]          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; disp_hex0[0]    ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; disp_hex0[1]    ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; disp_hex0[2]    ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
@@ -1645,8 +1626,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PR_reset_button ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; PR1_button      ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; dir_switch_1    ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; system_clock    ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; dir_switch_2    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; system_clock    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; dir_switch_2    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +-----------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -1712,10 +1693,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - ticker_disp:ticker_inst|disp_hex4[2]                                       ; 0                 ; 0       ;
 ;      - ticker_disp:ticker_inst|disp_hex5[4]                                       ; 0                 ; 0       ;
 ;      - ticker_disp:ticker_inst|disp_hex4[3]                                       ; 0                 ; 0       ;
-;      - freeze_region:freeze_region_inst|dir_sync                                  ; 1                 ; 0       ;
-;      - freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|clk~PR_IPORT ; 1                 ; 0       ;
+;      - freeze_region:freeze_region_inst|dir_sync                                  ; 0                 ; 0       ;
+;      - freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|clk~PR_IPORT ; 0                 ; 0       ;
 ; dir_switch_2                                                                      ;                   ;         ;
-;      - freeze_region:freeze_region_inst|dir_sync~feeder                           ; 1                 ; 0       ;
+;      - freeze_region:freeze_region_inst|dir_sync                                  ; 0                 ; 0       ;
 +-----------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1724,13 +1705,402 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                               ; Location             ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------------------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|clk~PR_IPORT                         ; MLABCELL_X8_Y4_N3    ; 38      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan1~4 ; MLABCELL_X8_Y4_N21   ; 34      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|clk~PR_IPORT                         ; LABCELL_X10_Y6_N6    ; 35      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan1~4 ; LABCELL_X9_Y6_N18    ; 31      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; system_clock                                                                                       ; PIN_AF14             ; 55      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; ticker_disp:ticker_inst|LessThan0~7                                                                ; MLABCELL_X84_Y11_N57 ; 11      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; ticker_disp:ticker_inst|count[3]~0                                                                 ; LABCELL_X83_Y12_N51  ; 29      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; ticker_disp:ticker_inst|disp_hex0[6]~5                                                             ; LABCELL_X83_Y12_N21  ; 24      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ticker_disp:ticker_inst|LessThan0~7                                                                ; LABCELL_X83_Y10_N36  ; 11      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; ticker_disp:ticker_inst|count[3]~0                                                                 ; MLABCELL_X84_Y12_N21 ; 29      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; ticker_disp:ticker_inst|disp_hex0[3]~5                                                             ; LABCELL_X85_Y12_N6   ; 24      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------------------------------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                                           ;
++-----------------------------------------------------------------------------------------------------------------+---------+
+; Name                                                                                                            ; Fan-Out ;
++-----------------------------------------------------------------------------------------------------------------+---------+
+; system_clock~input                                                                                              ; 55      ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|clk~PR_IPORT                                      ; 35      ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan1~4              ; 31      ;
+; ticker_disp:ticker_inst|Add0~1                                                                                  ; 30      ;
+; ticker_disp:ticker_inst|count[3]~0                                                                              ; 29      ;
+; ticker_disp:ticker_inst|disp_hex0[3]~5                                                                          ; 24      ;
+; ticker_disp:ticker_inst|Add0~21                                                                                 ; 24      ;
+; ticker_disp:ticker_inst|Add0~109                                                                                ; 22      ;
+; ticker_disp:ticker_inst|Add0~101                                                                                ; 22      ;
+; ticker_disp:ticker_inst|Add0~25                                                                                 ; 22      ;
+; ticker_disp:ticker_inst|Add0~9                                                                                  ; 22      ;
+; ticker_disp:ticker_inst|Add0~29                                                                                 ; 21      ;
+; ticker_disp:ticker_inst|Add0~113                                                                                ; 19      ;
+; ticker_disp:ticker_inst|Add0~41                                                                                 ; 19      ;
+; ticker_disp:ticker_inst|Add0~37                                                                                 ; 19      ;
+; ticker_disp:ticker_inst|Add0~33                                                                                 ; 19      ;
+; ticker_disp:ticker_inst|Add0~17                                                                                 ; 19      ;
+; ticker_disp:ticker_inst|Add0~13                                                                                 ; 19      ;
+; ticker_disp:ticker_inst|Add0~5                                                                                  ; 18      ;
+; ticker_disp:ticker_inst|Add0~77                                                                                 ; 17      ;
+; ticker_disp:ticker_inst|Add0~73                                                                                 ; 17      ;
+; ticker_disp:ticker_inst|Add0~49                                                                                 ; 17      ;
+; ticker_disp:ticker_inst|Add0~45                                                                                 ; 17      ;
+; ticker_disp:ticker_inst|Add0~97                                                                                 ; 16      ;
+; ticker_disp:ticker_inst|Add0~93                                                                                 ; 16      ;
+; ticker_disp:ticker_inst|Add0~85                                                                                 ; 16      ;
+; ticker_disp:ticker_inst|Add0~69                                                                                 ; 16      ;
+; ticker_disp:ticker_inst|Add0~57                                                                                 ; 16      ;
+; ticker_disp:ticker_inst|Add0~53                                                                                 ; 16      ;
+; ticker_disp:ticker_inst|Add0~89                                                                                 ; 15      ;
+; ticker_disp:ticker_inst|Add0~81                                                                                 ; 15      ;
+; ticker_disp:ticker_inst|Add0~65                                                                                 ; 15      ;
+; ticker_disp:ticker_inst|LessThan0~7                                                                             ; 11      ;
+; ticker_disp:ticker_inst|Add0~61                                                                                 ; 11      ;
+; ticker_disp:ticker_inst|process_0~16                                                                            ; 10      ;
+; ticker_disp:ticker_inst|process_0~22                                                                            ; 9       ;
+; ticker_disp:ticker_inst|disp_hex0~0                                                                             ; 9       ;
+; ticker_disp:ticker_inst|Add0~105                                                                                ; 8       ;
+; ticker_disp:ticker_inst|disp_hex0~1                                                                             ; 7       ;
+; ticker_disp:ticker_inst|process_0~8                                                                             ; 7       ;
+; ticker_disp:ticker_inst|LessThan2~4                                                                             ; 6       ;
+; ticker_disp:ticker_inst|LessThan0~8                                                                             ; 6       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[24]           ; 5       ;
+; ticker_disp:ticker_inst|process_0~24                                                                            ; 5       ;
+; ticker_disp:ticker_inst|LessThan0~5                                                                             ; 5       ;
+; ticker_disp:ticker_inst|process_0~18                                                                            ; 5       ;
+; ticker_disp:ticker_inst|LessThan2~3                                                                             ; 5       ;
+; ticker_disp:ticker_inst|process_0~15                                                                            ; 5       ;
+; ticker_disp:ticker_inst|process_0~4                                                                             ; 5       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[16]           ; 4       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[18]           ; 4       ;
+; ticker_disp:ticker_inst|process_0~41                                                                            ; 4       ;
+; ticker_disp:ticker_inst|process_0~35                                                                            ; 4       ;
+; ticker_disp:ticker_inst|process_0~34                                                                            ; 4       ;
+; ticker_disp:ticker_inst|process_0~28                                                                            ; 4       ;
+; ticker_disp:ticker_inst|LessThan1~8                                                                             ; 4       ;
+; ticker_disp:ticker_inst|LessThan0~4                                                                             ; 4       ;
+; ticker_disp:ticker_inst|LessThan2~2                                                                             ; 4       ;
+; ticker_disp:ticker_inst|LessThan0~3                                                                             ; 4       ;
+; ticker_disp:ticker_inst|process_0~7                                                                             ; 4       ;
+; ticker_disp:ticker_inst|LessThan7~0                                                                             ; 4       ;
+; ticker_disp:ticker_inst|LessThan9~1                                                                             ; 4       ;
+; ticker_disp:ticker_inst|process_0~0                                                                             ; 4       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan1~3              ; 3       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan1~0              ; 3       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[25]           ; 3       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[15]           ; 3       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[13]           ; 3       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[11]           ; 3       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[23]           ; 3       ;
+; ticker_disp:ticker_inst|disp_hex2~0                                                                             ; 3       ;
+; ticker_disp:ticker_inst|disp_hex1~0                                                                             ; 3       ;
+; ticker_disp:ticker_inst|disp_hex0[3]~4                                                                          ; 3       ;
+; ticker_disp:ticker_inst|process_0~33                                                                            ; 3       ;
+; ticker_disp:ticker_inst|process_0~31                                                                            ; 3       ;
+; ticker_disp:ticker_inst|process_0~30                                                                            ; 3       ;
+; ticker_disp:ticker_inst|process_0~27                                                                            ; 3       ;
+; ticker_disp:ticker_inst|LessThan4~0                                                                             ; 3       ;
+; ticker_disp:ticker_inst|LessThan3~0                                                                             ; 3       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[12]~DUPLICATE ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[14]~DUPLICATE ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[17]~DUPLICATE ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|rtl~5                                             ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|rtl~4                                             ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan0~6              ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan0~5              ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan0~1              ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan0~0              ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~69                  ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~61                  ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~45                  ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~37                  ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~13                  ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[8]            ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[9]            ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[6]            ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[19]           ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[20]           ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[21]           ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[22]           ; 2       ;
+; ticker_disp:ticker_inst|disp_hex4~0                                                                             ; 2       ;
+; ticker_disp:ticker_inst|disp_hex1~2                                                                             ; 2       ;
+; ticker_disp:ticker_inst|LessThan1~10                                                                            ; 2       ;
+; ticker_disp:ticker_inst|LessThan10~7                                                                            ; 2       ;
+; ticker_disp:ticker_inst|LessThan10~6                                                                            ; 2       ;
+; ticker_disp:ticker_inst|disp_hex0~6                                                                             ; 2       ;
+; ticker_disp:ticker_inst|process_0~36                                                                            ; 2       ;
+; ticker_disp:ticker_inst|LessThan11~7                                                                            ; 2       ;
+; ticker_disp:ticker_inst|LessThan11~1                                                                            ; 2       ;
+; ticker_disp:ticker_inst|disp_hex0[3]~3                                                                          ; 2       ;
+; ticker_disp:ticker_inst|process_0~29                                                                            ; 2       ;
+; ticker_disp:ticker_inst|LessThan10~4                                                                            ; 2       ;
+; ticker_disp:ticker_inst|LessThan10~0                                                                            ; 2       ;
+; ticker_disp:ticker_inst|LessThan9~5                                                                             ; 2       ;
+; ticker_disp:ticker_inst|LessThan9~3                                                                             ; 2       ;
+; ticker_disp:ticker_inst|LessThan9~2                                                                             ; 2       ;
+; ticker_disp:ticker_inst|LessThan5~4                                                                             ; 2       ;
+; ticker_disp:ticker_inst|process_0~21                                                                            ; 2       ;
+; ticker_disp:ticker_inst|LessThan4~1                                                                             ; 2       ;
+; ticker_disp:ticker_inst|LessThan3~3                                                                             ; 2       ;
+; ticker_disp:ticker_inst|process_0~19                                                                            ; 2       ;
+; ticker_disp:ticker_inst|process_0~17                                                                            ; 2       ;
+; ticker_disp:ticker_inst|LessThan2~1                                                                             ; 2       ;
+; ticker_disp:ticker_inst|LessThan1~6                                                                             ; 2       ;
+; ticker_disp:ticker_inst|LessThan1~5                                                                             ; 2       ;
+; ticker_disp:ticker_inst|LessThan1~1                                                                             ; 2       ;
+; ticker_disp:ticker_inst|LessThan0~2                                                                             ; 2       ;
+; ticker_disp:ticker_inst|LessThan0~0                                                                             ; 2       ;
+; ticker_disp:ticker_inst|process_0~14                                                                            ; 2       ;
+; ticker_disp:ticker_inst|LessThan5~3                                                                             ; 2       ;
+; ticker_disp:ticker_inst|LessThan5~0                                                                             ; 2       ;
+; ticker_disp:ticker_inst|process_0~13                                                                            ; 2       ;
+; ticker_disp:ticker_inst|process_0~12                                                                            ; 2       ;
+; ticker_disp:ticker_inst|process_0~11                                                                            ; 2       ;
+; ticker_disp:ticker_inst|process_0~10                                                                            ; 2       ;
+; ticker_disp:ticker_inst|process_0~3                                                                             ; 2       ;
+; ticker_disp:ticker_inst|process_0~1                                                                             ; 2       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[7]~DUPLICATE  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[10]~DUPLICATE ; 1       ;
+; ticker_disp:ticker_inst|disp_hex4[3]~feeder                                                                     ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|dir~PR_IPORT                                      ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|leds[3]~PR_OPORT                                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|leds[2]~PR_OPORT                                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|leds[1]~PR_OPORT                                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|leds[0]~PR_OPORT                                  ; 1       ;
+; dir_switch_2~input                                                                                              ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan1~2              ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan1~1              ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan0~4              ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan0~3              ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|LessThan0~2              ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3]                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[2]                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[1]                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[0]                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[0]            ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~102                 ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~101                 ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[1]            ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~98                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~97                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[2]            ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~94                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~93                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[3]            ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~90                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~89                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[4]            ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~86                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~85                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[5]            ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~82                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~81                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~77                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~74                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~73                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~70                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~66                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~65                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~62                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~58                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~57                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~54                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~53                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~50                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~49                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~46                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~42                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~41                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~38                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~34                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~33                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~30                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~29                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~26                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~25                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~22                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~21                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~18                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~17                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~14                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~10                  ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~9                   ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~6                   ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~5                   ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~2                   ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|Add0~1                   ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[12]           ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[14]           ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[7]            ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[10]           ; 1       ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[17]           ; 1       ;
+; ticker_disp:ticker_inst|disp_hex5~1                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex0[3]~11                                                                         ; 1       ;
+; ticker_disp:ticker_inst|process_0~42                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex5~0                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex4~2                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex1~6                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex4~1                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex3~1                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex2~5                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex3~0                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan0~12                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan0~11                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan1~11                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan0~10                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex2~4                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex2~3                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex2~2                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan0~9                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex2~1                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex1~5                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex1~4                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex1~3                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex1~1                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan1~9                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex0~10                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex0~9                                                                             ; 1       ;
+; ticker_disp:ticker_inst|disp_hex0~8                                                                             ; 1       ;
+; ticker_disp:ticker_inst|process_0~40                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan10~8                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan10~5                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan0~6                                                                             ; 1       ;
+; ticker_disp:ticker_inst|process_0~39                                                                            ; 1       ;
+; ticker_disp:ticker_inst|process_0~38                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex0~7                                                                             ; 1       ;
+; ticker_disp:ticker_inst|process_0~37                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan11~6                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan11~5                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan11~4                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan11~3                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan11~2                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan4~7                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan4~6                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan4~5                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan3~6                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan3~5                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan3~4                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan5~6                                                                             ; 1       ;
+; ticker_disp:ticker_inst|process_0~32                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan5~5                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan10~3                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan10~2                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan10~1                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan9~6                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan9~4                                                                             ; 1       ;
+; ticker_disp:ticker_inst|process_0~26                                                                            ; 1       ;
+; ticker_disp:ticker_inst|process_0~25                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan7~8                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan7~7                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan7~6                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan7~5                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan7~4                                                                             ; 1       ;
+; ticker_disp:ticker_inst|process_0~23                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex0~2                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan4~4                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan4~3                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan4~2                                                                             ; 1       ;
+; ticker_disp:ticker_inst|process_0~20                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan3~2                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan3~1                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan11~0                                                                            ; 1       ;
+; ticker_disp:ticker_inst|LessThan2~0                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan1~7                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan1~4                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan1~3                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan1~2                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan1~0                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan0~1                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan5~2                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan5~1                                                                             ; 1       ;
+; ticker_disp:ticker_inst|process_0~9                                                                             ; 1       ;
+; ticker_disp:ticker_inst|process_0~6                                                                             ; 1       ;
+; ticker_disp:ticker_inst|process_0~5                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan7~3                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan7~2                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan7~1                                                                             ; 1       ;
+; ticker_disp:ticker_inst|process_0~2                                                                             ; 1       ;
+; ticker_disp:ticker_inst|LessThan9~0                                                                             ; 1       ;
+; freeze_region:freeze_region_inst|dir_sync                                                                       ; 1       ;
+; ticker_disp:ticker_inst|disp_hex5[3]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex5[2]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex4[6]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex3[3]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex2[6]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex2[4]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex2[3]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex2[2]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex1[6]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex1[4]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex1[3]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex1[2]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex0[6]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex0[4]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex0[3]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex0[2]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|count[28]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[25]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[0]                                                                                ; 1       ;
+; ticker_disp:ticker_inst|count[26]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[17]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[13]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[12]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[11]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[10]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[4]                                                                                ; 1       ;
+; ticker_disp:ticker_inst|count[5]                                                                                ; 1       ;
+; ticker_disp:ticker_inst|count[3]                                                                                ; 1       ;
+; ticker_disp:ticker_inst|count[2]                                                                                ; 1       ;
+; ticker_disp:ticker_inst|count[1]                                                                                ; 1       ;
+; ticker_disp:ticker_inst|count[8]                                                                                ; 1       ;
+; ticker_disp:ticker_inst|count[7]                                                                                ; 1       ;
+; ticker_disp:ticker_inst|count[9]                                                                                ; 1       ;
+; ticker_disp:ticker_inst|count[6]                                                                                ; 1       ;
+; ticker_disp:ticker_inst|count[16]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[15]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[14]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[18]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[20]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[21]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[19]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[22]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[24]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[23]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|count[27]                                                                               ; 1       ;
+; ticker_disp:ticker_inst|Add0~110                                                                                ; 1       ;
+; ticker_disp:ticker_inst|Add0~106                                                                                ; 1       ;
+; ticker_disp:ticker_inst|Add0~102                                                                                ; 1       ;
+; ticker_disp:ticker_inst|Add0~98                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~94                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~90                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~86                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~82                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~78                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~74                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~70                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~66                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~62                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~58                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~54                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~50                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~46                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~42                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~38                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~34                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~30                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~26                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~22                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~18                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~14                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~10                                                                                 ; 1       ;
+; ticker_disp:ticker_inst|Add0~6                                                                                  ; 1       ;
+; ticker_disp:ticker_inst|Add0~2                                                                                  ; 1       ;
+; ticker_disp:ticker_inst|disp_hex5[6]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex5[4]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex4[4]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex4[3]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex4[2]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex3[6]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex3[4]                                                                            ; 1       ;
+; ticker_disp:ticker_inst|disp_hex3[2]                                                                            ; 1       ;
++-----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------+
@@ -1738,14 +2108,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 623 / 289,320 ( < 1 % ) ;
+; Block interconnects                         ; 663 / 289,320 ( < 1 % ) ;
 ; C12 interconnects                           ; 6 / 13,420 ( < 1 % )    ;
-; C2 interconnects                            ; 195 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 105 / 56,300 ( < 1 % )  ;
+; C2 interconnects                            ; 224 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 99 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 80 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 95 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 0 / 16 ( 0 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1801,12 +2171,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 144 / 84,580 ( < 1 % )  ;
+; Local interconnects                         ; 142 / 84,580 ( < 1 % )  ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 31 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 35 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 241 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 297 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 32 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 36 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 252 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 313 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 0 / 360 ( 0 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1867,9 +2237,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+-----------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008 ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+-----------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Total Pass         ; 57        ; 0            ; 57        ; 0            ; 0            ; 57        ; 57        ; 57        ; 57        ; 57        ; 0            ; 52           ; 0            ; 0            ; 0            ; 0            ; 52           ; 0            ; 0            ; 0            ; 0            ; 52           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; Total Pass         ; 53        ; 0            ; 53        ; 0            ; 0            ; 53        ; 53        ; 53        ; 53        ; 53        ; 0            ; 48           ; 0            ; 0            ; 0            ; 0            ; 48           ; 0            ; 0            ; 0            ; 0            ; 48           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0         ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 57           ; 0         ; 57           ; 57           ; 0         ; 0         ; 0         ; 0         ; 0         ; 57           ; 5            ; 57           ; 57           ; 57           ; 57           ; 5            ; 57           ; 57           ; 57           ; 57           ; 5            ; 57           ; 57           ; 57           ; 57           ; 57           ; 57           ;
+; Total Inapplicable ; 0         ; 53           ; 0         ; 53           ; 53           ; 0         ; 0         ; 0         ; 0         ; 0         ; 53           ; 5            ; 53           ; 53           ; 53           ; 53           ; 5            ; 53           ; 53           ; 53           ; 53           ; 5            ; 53           ; 53           ; 53           ; 53           ; 53           ; 53           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0         ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; PR_done_led        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; PR_error_led       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
@@ -1877,10 +2247,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LED[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; LED[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; LED[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; LED[4]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; LED[5]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; LED[6]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; LED[7]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; disp_hex0[0]       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; disp_hex0[1]       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; disp_hex0[2]       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
@@ -1950,7 +2316,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Enable open drain on nCEO pin                                    ; On                          ;
 ; Enable Partial Reconfiguration pins                              ; Off                         ;
 ; Enable input tri-state on active configuration pins in user mode ; Off                         ;
-; Enable internal scrubbing                                        ; Off                         ;
 ; Active Serial clock source                                       ; 100 MHz Internal Oscillator ;
 ; Device initialization clock source                               ; Internal Oscillator         ;
 ; Configuration via Protocol                                       ; Off                         ;
@@ -1979,8 +2344,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; system_clock    ; system_clock         ; 43.2              ;
-; I/O             ; system_clock         ; 9.6               ;
+; system_clock    ; system_clock         ; 36.5              ;
+; I/O             ; system_clock         ; 8.1               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
@@ -1991,56 +2356,56 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register                                                                                       ; Destination Register                                                                           ; Delay Added in ns ;
 +-------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+-------------------+
-; system_clock                                                                                          ; freeze_region:freeze_region_inst|dir_sync                                                      ; 2.040             ;
-; ticker_disp:ticker_inst|count[27]                                                                     ; ticker_disp:ticker_inst|disp_hex2[4]                                                           ; 1.040             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[6]  ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 1.030             ;
-; ticker_disp:ticker_inst|count[26]                                                                     ; ticker_disp:ticker_inst|disp_hex2[4]                                                           ; 1.019             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[17] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.937             ;
-; ticker_disp:ticker_inst|count[15]                                                                     ; ticker_disp:ticker_inst|disp_hex2[3]                                                           ; 0.908             ;
-; ticker_disp:ticker_inst|count[28]                                                                     ; ticker_disp:ticker_inst|disp_hex1[6]                                                           ; 0.901             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[13] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.896             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[14] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.893             ;
-; ticker_disp:ticker_inst|count[6]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.892             ;
-; ticker_disp:ticker_inst|count[14]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.887             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[16] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.860             ;
-; ticker_disp:ticker_inst|count[5]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.860             ;
-; ticker_disp:ticker_inst|count[9]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.858             ;
-; ticker_disp:ticker_inst|count[1]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.845             ;
-; ticker_disp:ticker_inst|count[2]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.845             ;
-; ticker_disp:ticker_inst|count[3]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.845             ;
-; ticker_disp:ticker_inst|count[4]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.845             ;
-; ticker_disp:ticker_inst|count[0]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.845             ;
-; ticker_disp:ticker_inst|count[25]                                                                     ; ticker_disp:ticker_inst|disp_hex2[4]                                                           ; 0.826             ;
-; ticker_disp:ticker_inst|count[8]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.821             ;
-; ticker_disp:ticker_inst|count[7]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.797             ;
-; ticker_disp:ticker_inst|count[23]                                                                     ; ticker_disp:ticker_inst|disp_hex2[4]                                                           ; 0.796             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[12] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.782             ;
-; ticker_disp:ticker_inst|count[18]                                                                     ; ticker_disp:ticker_inst|disp_hex2[3]                                                           ; 0.731             ;
-; ticker_disp:ticker_inst|count[20]                                                                     ; ticker_disp:ticker_inst|disp_hex2[4]                                                           ; 0.721             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[15] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.700             ;
-; ticker_disp:ticker_inst|count[19]                                                                     ; ticker_disp:ticker_inst|disp_hex2[4]                                                           ; 0.695             ;
-; ticker_disp:ticker_inst|count[17]                                                                     ; ticker_disp:ticker_inst|disp_hex2[3]                                                           ; 0.691             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[11] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.682             ;
-; ticker_disp:ticker_inst|count[10]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.660             ;
-; ticker_disp:ticker_inst|count[11]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.660             ;
-; ticker_disp:ticker_inst|count[12]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.660             ;
-; ticker_disp:ticker_inst|count[13]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.660             ;
-; ticker_disp:ticker_inst|count[16]                                                                     ; ticker_disp:ticker_inst|disp_hex2[3]                                                           ; 0.629             ;
-; ticker_disp:ticker_inst|count[24]                                                                     ; ticker_disp:ticker_inst|disp_hex2[4]                                                           ; 0.621             ;
-; ticker_disp:ticker_inst|count[22]                                                                     ; ticker_disp:ticker_inst|disp_hex2[4]                                                           ; 0.621             ;
-; ticker_disp:ticker_inst|count[21]                                                                     ; ticker_disp:ticker_inst|disp_hex2[4]                                                           ; 0.621             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[18] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.554             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[23] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.544             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[22] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.544             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[21] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.544             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[20] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.544             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[19] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.544             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[24] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.544             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[10] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.447             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[9]  ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.447             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[8]  ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.447             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[7]  ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.447             ;
-; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[25] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.401             ;
+; system_clock                                                                                          ; freeze_region:freeze_region_inst|dir_sync                                                      ; 1.904             ;
+; ticker_disp:ticker_inst|count[9]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 1.086             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[11] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 1.068             ;
+; ticker_disp:ticker_inst|count[8]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 1.066             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[24] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 1.040             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[18] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 1.034             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[23] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 1.009             ;
+; ticker_disp:ticker_inst|count[7]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 1.005             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[6]  ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.998             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[25] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.996             ;
+; ticker_disp:ticker_inst|count[5]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.981             ;
+; ticker_disp:ticker_inst|count[6]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.978             ;
+; ticker_disp:ticker_inst|count[1]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.962             ;
+; ticker_disp:ticker_inst|count[2]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.962             ;
+; ticker_disp:ticker_inst|count[3]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.962             ;
+; ticker_disp:ticker_inst|count[4]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.962             ;
+; ticker_disp:ticker_inst|count[0]                                                                      ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.962             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[14] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.891             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[13] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.891             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[22] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.875             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[20] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.861             ;
+; ticker_disp:ticker_inst|count[26]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.860             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[16] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.857             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[19] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.847             ;
+; ticker_disp:ticker_inst|count[28]                                                                     ; ticker_disp:ticker_inst|disp_hex5[3]                                                           ; 0.830             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[15] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.809             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[10] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.795             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[9]  ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.795             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[8]  ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.795             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[7]  ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.795             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[12] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.794             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[21] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.755             ;
+; ticker_disp:ticker_inst|count[27]                                                                     ; ticker_disp:ticker_inst|disp_hex5[3]                                                           ; 0.712             ;
+; ticker_disp:ticker_inst|count[24]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.665             ;
+; ticker_disp:ticker_inst|count[16]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.660             ;
+; ticker_disp:ticker_inst|count[18]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.658             ;
+; ticker_disp:ticker_inst|count[10]                                                                     ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.657             ;
+; ticker_disp:ticker_inst|count[11]                                                                     ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.657             ;
+; ticker_disp:ticker_inst|count[12]                                                                     ; ticker_disp:ticker_inst|disp_hex3[4]                                                           ; 0.657             ;
+; ticker_disp:ticker_inst|count[22]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.634             ;
+; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led:count[17] ; freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[3] ; 0.626             ;
+; ticker_disp:ticker_inst|count[17]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.624             ;
+; ticker_disp:ticker_inst|count[25]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.614             ;
+; ticker_disp:ticker_inst|count[15]                                                                     ; ticker_disp:ticker_inst|disp_hex3[6]                                                           ; 0.612             ;
+; ticker_disp:ticker_inst|count[14]                                                                     ; ticker_disp:ticker_inst|disp_hex3[6]                                                           ; 0.608             ;
+; ticker_disp:ticker_inst|count[19]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.606             ;
+; ticker_disp:ticker_inst|count[21]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.601             ;
+; ticker_disp:ticker_inst|count[20]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.597             ;
+; ticker_disp:ticker_inst|count[13]                                                                     ; ticker_disp:ticker_inst|disp_hex3[6]                                                           ; 0.577             ;
+; ticker_disp:ticker_inst|count[23]                                                                     ; ticker_disp:ticker_inst|disp_hex1[2]                                                           ; 0.572             ;
 +-------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 50 path(s) that have the largest delay added for hold.
 
@@ -2048,14 +2413,14 @@ Note: This table only shows the top 50 path(s) that have the largest delay added
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device 5CSEMA5F31C6 for design "PR_test"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (184020): Starting Fitter periphery placement operations
-Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
+Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:01
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'PR_test.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -2064,41 +2429,41 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
+Info (11798): Fitter preparation operations ending: elapsed time is 00:01:10
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:15
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:24
 Info (170193): Fitter routing operations beginning
 Info (188030): Fitter recommends that you use the SCRUB programming method for the smallest partial bitstream size.
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X78_Y11 to location X89_Y22
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:16
+Info (170194): Fitter routing operations ending: elapsed time is 00:01:26
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 1.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 9.50 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
-Info (144001): Generated suppressed messages file F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.fit.smsg
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:32
+Info (144001): Generated suppressed messages file C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.fit.smsg
 Warning (142049): Removing all preexisting persona files because static persona is being regenerated in this compilation.
 Info (142047): Generating persona file "persona/PR_test.root_partition.persona" for static logic.
     Info (142048): Static persona includes partition "Top"
 Info (142046): Generating persona file "persona/PR_test.ledwr_6aed1.persona" for reconfigurable partition "led_wrapper:led_wrapper_inst"
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 2519 megabytes
-    Info: Processing ended: Thu Jun 11 15:35:16 2015
-    Info: Elapsed time: 00:00:51
-    Info: Total CPU time (on all processors): 00:01:12
+    Info: Peak virtual memory: 2137 megabytes
+    Info: Processing ended: Mon Jun 15 21:42:40 2015
+    Info: Elapsed time: 00:05:48
+    Info: Total CPU time (on all processors): 00:02:56
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.fit.smsg.
+The suppressed messages can be found in C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/output_files/PR_test.fit.smsg.
 
 
