@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ReconfigRev
-Thu Jun 11 15:49:48 2015
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+Mon Jun 15 19:15:39 2015
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
 ---------------------
@@ -32,7 +32,7 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -49,27 +49,27 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jun 11 15:49:48 2015       ;
-; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
-; Revision Name                   ; ReconfigRev                                 ;
-; Top-level Entity Name           ; PR_test_top                                 ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A until Partition Merge                   ;
-; Total registers                 ; N/A until Partition Merge                   ;
-; Total pins                      ; N/A until Partition Merge                   ;
-; Total virtual pins              ; N/A until Partition Merge                   ;
-; Total block memory bits         ; N/A until Partition Merge                   ;
-; Total DSP Blocks                ; N/A until Partition Merge                   ;
-; Total HSSI RX PCSs              ; N/A until Partition Merge                   ;
-; Total HSSI PMA RX Deserializers ; N/A until Partition Merge                   ;
-; Total HSSI TX PCSs              ; N/A until Partition Merge                   ;
-; Total HSSI PMA TX Serializers   ; N/A until Partition Merge                   ;
-; Total PLLs                      ; N/A until Partition Merge                   ;
-; Total DLLs                      ; N/A until Partition Merge                   ;
-+---------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Jun 15 19:15:39 2015      ;
+; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
+; Revision Name                   ; ReconfigRev                                ;
+; Top-level Entity Name           ; PR_test_top                                ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A until Partition Merge                  ;
+; Total registers                 ; N/A until Partition Merge                  ;
+; Total pins                      ; N/A until Partition Merge                  ;
+; Total virtual pins              ; N/A until Partition Merge                  ;
+; Total block memory bits         ; N/A until Partition Merge                  ;
+; Total DSP Blocks                ; N/A until Partition Merge                  ;
+; Total HSSI RX PCSs              ; N/A until Partition Merge                  ;
+; Total HSSI PMA RX Deserializers ; N/A until Partition Merge                  ;
+; Total HSSI TX PCSs              ; N/A until Partition Merge                  ;
+; Total HSSI PMA TX Serializers   ; N/A until Partition Merge                  ;
+; Total PLLs                      ; N/A until Partition Merge                  ;
+; Total DLLs                      ; N/A until Partition Merge                  ;
++---------------------------------+--------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -165,50 +165,50 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                     ; Library ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
-; ticker_disp.vhd                  ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/ticker_disp.vhd        ;         ;
-; PR_test_top.vhd                  ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/PR_test_top.vhd        ;         ;
-; freeze_region.vhd                ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/freeze_region.vhd      ;         ;
-; pr_states.vhd                    ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/pr_states.vhd          ;         ;
-; pr_engine.vhd                    ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/pr_engine.vhd          ;         ;
-; pr_cb_interface.vhd              ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/pr_cb_interface.vhd    ;         ;
-; pr_user_host.vhd                 ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/pr_user_host.vhd       ;         ;
-; pr_cb_states.vhd                 ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/pr_cb_states.vhd       ;         ;
-; rom_bitstream.vhd                ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/rom_bitstream.vhd      ;         ;
-; persona1_rom_pr.vhd              ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/persona1_rom_pr.vhd    ;         ;
-; persona2_rom_pr.vhd              ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/persona2_rom_pr.vhd    ;         ;
-; led_wrapper_2.vhd                ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/led_wrapper_2.vhd      ;         ;
-; led_flash_2.vhd                  ; yes             ; User VHDL File                         ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/led_flash_2.vhd        ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; f:/quartus/quartus/libraries/megafunctions/altsyncram.tdf                        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; f:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc                 ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; f:/quartus/quartus/libraries/megafunctions/lpm_mux.inc                           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; f:/quartus/quartus/libraries/megafunctions/lpm_decode.inc                        ;         ;
-; aglobal150.inc                   ; yes             ; Megafunction                           ; f:/quartus/quartus/libraries/megafunctions/aglobal150.inc                        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; f:/quartus/quartus/libraries/megafunctions/a_rdenreg.inc                         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; f:/quartus/quartus/libraries/megafunctions/altrom.inc                            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; f:/quartus/quartus/libraries/megafunctions/altram.inc                            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; f:/quartus/quartus/libraries/megafunctions/altdpram.inc                          ;         ;
-; db/altsyncram_75k1.tdf           ; yes             ; Auto-Generated Megafunction            ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/db/altsyncram_75k1.tdf ;         ;
-; persona1_rom_pr.mif              ; yes             ; Auto-Found Memory Initialization File  ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/persona1_rom_pr.mif    ;         ;
-; db/decode_q2a.tdf                ; yes             ; Auto-Generated Megafunction            ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/db/decode_q2a.tdf      ;         ;
-; db/mux_0jb.tdf                   ; yes             ; Auto-Generated Megafunction            ; F:/Quartus/workspace/fpga_partial_reconfiguration/PR_Test/db/mux_0jb.tdf         ;         ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                          ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; ticker_disp.vhd                  ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/ticker_disp.vhd        ;         ;
+; PR_test_top.vhd                  ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/PR_test_top.vhd        ;         ;
+; freeze_region.vhd                ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/freeze_region.vhd      ;         ;
+; pr_states.vhd                    ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/pr_states.vhd          ;         ;
+; pr_engine.vhd                    ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/pr_engine.vhd          ;         ;
+; pr_cb_interface.vhd              ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/pr_cb_interface.vhd    ;         ;
+; pr_user_host.vhd                 ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/pr_user_host.vhd       ;         ;
+; pr_cb_states.vhd                 ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/pr_cb_states.vhd       ;         ;
+; rom_bitstream.vhd                ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/rom_bitstream.vhd      ;         ;
+; persona1_rom_pr.vhd              ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/persona1_rom_pr.vhd    ;         ;
+; persona2_rom_pr.vhd              ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/persona2_rom_pr.vhd    ;         ;
+; led_wrapper_2.vhd                ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/led_wrapper_2.vhd      ;         ;
+; led_flash_2.vhd                  ; yes             ; User VHDL File                         ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/led_flash_2.vhd        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/program files/altera/14.1/quartus/libraries/megafunctions/altsyncram.tdf                                             ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/program files/altera/14.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                      ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/program files/altera/14.1/quartus/libraries/megafunctions/lpm_mux.inc                                                ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/program files/altera/14.1/quartus/libraries/megafunctions/lpm_decode.inc                                             ;         ;
+; aglobal141.inc                   ; yes             ; Megafunction                           ; c:/program files/altera/14.1/quartus/libraries/megafunctions/aglobal141.inc                                             ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/program files/altera/14.1/quartus/libraries/megafunctions/a_rdenreg.inc                                              ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/program files/altera/14.1/quartus/libraries/megafunctions/altrom.inc                                                 ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/program files/altera/14.1/quartus/libraries/megafunctions/altram.inc                                                 ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/program files/altera/14.1/quartus/libraries/megafunctions/altdpram.inc                                               ;         ;
+; db/altsyncram_75k1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/db/altsyncram_75k1.tdf ;         ;
+; persona1_rom_pr.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/persona1_rom_pr.mif    ;         ;
+; db/decode_q2a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/db/decode_q2a.tdf      ;         ;
+; db/mux_0jb.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/jackz_000/Documents/UniFreiburg/SS15/EMP/Workspace/fpga_partial_reconfiguration/PR_Test/db/mux_0jb.tdf         ;         ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------+
@@ -367,29 +367,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; File                                          ; Location           ; Library ; Checksum                         ;
 +-----------------------------------------------+--------------------+---------+----------------------------------+
 ; libraries/megafunctions/a_rdenreg.inc         ; Quartus II Install ; work    ; 3fcdce7559590d5a8afbe64788d201fb ;
-; libraries/megafunctions/aglobal150.inc        ; Quartus II Install ; work    ; 09e97ce26a1e3148bc4c3828c116bf62 ;
+; libraries/megafunctions/aglobal141.inc        ; Quartus II Install ; work    ; 533c7ba2a4f6ade9514bdca75c93e92a ;
 ; libraries/megafunctions/altdpram.inc          ; Quartus II Install ; work    ; 2f9e6727b678ffd76e72bc5a95a26300 ;
 ; libraries/megafunctions/altram.inc            ; Quartus II Install ; work    ; ad5518b39ffd3cf1df377e6360d1c9b6 ;
 ; libraries/megafunctions/altrom.inc            ; Quartus II Install ; work    ; 192b74eafa8debf2248ea73881e77f91 ;
-; libraries/megafunctions/altsyncram.tdf        ; Quartus II Install ; work    ; 4edf702f4e4e41f3560563dbedf53384 ;
+; libraries/megafunctions/altsyncram.tdf        ; Quartus II Install ; work    ; 9711ab9e5c05594b16a206e5aa698ab8 ;
 ; libraries/megafunctions/lpm_decode.inc        ; Quartus II Install ; work    ; 10da69a8bbd590d66779e7a142f73790 ;
 ; libraries/megafunctions/lpm_mux.inc           ; Quartus II Install ; work    ; dd87bed90959d6126db09970164b7ba6 ;
 ; libraries/megafunctions/stratix_ram_block.inc ; Quartus II Install ; work    ; e3a03868917f0b3dd57b6ed1dd195f22 ;
-; db/altsyncram_75k1.tdf                        ; Project Directory  ; work    ; ce6c6c03617548dc3c5e38fcb051bd7d ;
-; db/decode_q2a.tdf                             ; Project Directory  ; work    ; 0f24c869cef8a9e86e42e6a6eb67b6f7 ;
-; db/mux_0jb.tdf                                ; Project Directory  ; work    ; 4e18bf0b26d099b54429e1280188a323 ;
-; freeze_region.vhd                             ; Project Directory  ; work    ; a4fc6a43eb4b221957880701a7881cb7 ;
-; persona1_rom_pr.mif                           ; Project Directory  ; work    ; 562b8e314957d650bb1753a184bb0ef7 ;
-; persona1_rom_pr.vhd                           ; Project Directory  ; work    ; cd6cd2ed5decba5bba199d59a38e28aa ;
-; persona2_rom_pr.vhd                           ; Project Directory  ; work    ; 8de1f0d6eadf0887502d34cf356eefc2 ;
-; pr_cb_interface.vhd                           ; Project Directory  ; work    ; 0b42a5c86ed90cf3acfc9a44ffa9c221 ;
-; pr_cb_states.vhd                              ; Project Directory  ; work    ; bc9c822a974f14a6e01e7d9648c762de ;
-; pr_engine.vhd                                 ; Project Directory  ; work    ; f51dc5ebd51997923662a3a9eae6cd1f ;
-; pr_states.vhd                                 ; Project Directory  ; work    ; d8144833722292d4cd78c0aa353c33ac ;
-; PR_test_top.vhd                               ; Project Directory  ; work    ; 75c654f51c936ecbd61aada7a3803f5d ;
-; pr_user_host.vhd                              ; Project Directory  ; work    ; 8604d39479b6c9bc4ccce37b165626dd ;
-; rom_bitstream.vhd                             ; Project Directory  ; work    ; 3493ed1cb5ded4c90b77cfbbf8f35255 ;
-; ticker_disp.vhd                               ; Project Directory  ; work    ; 5fcc515f0a94aa41e3d8da771f17c74b ;
+; db/altsyncram_75k1.tdf                        ; Project Directory  ; work    ; 45a7a3819ebd5dd45c1acf17c1dfb64d ;
+; db/decode_q2a.tdf                             ; Project Directory  ; work    ; 24613048ee487ba35bd11b9cee18aec4 ;
+; db/mux_0jb.tdf                                ; Project Directory  ; work    ; 53b14171c6b8d865faf9981d85e9eeb2 ;
+; freeze_region.vhd                             ; Project Directory  ; work    ; 9493d1348126b37c44a3934cc9c84187 ;
+; persona1_rom_pr.mif                           ; Project Directory  ; work    ; d2fc318ccc5b2d83be612ea7d55e9ba1 ;
+; persona1_rom_pr.vhd                           ; Project Directory  ; work    ; d7fdfc56a65c12a18d2d0a09216a7e21 ;
+; persona2_rom_pr.vhd                           ; Project Directory  ; work    ; 6c8ea38c4b6620ab4a02105b6e0802b0 ;
+; pr_cb_interface.vhd                           ; Project Directory  ; work    ; d1338893ffa3bb6cf97c246107f4af8a ;
+; pr_cb_states.vhd                              ; Project Directory  ; work    ; c364d546106ee150ce90bd26883ed217 ;
+; pr_engine.vhd                                 ; Project Directory  ; work    ; 1dde8406aac9617b5a2ad6a0ee59bcef ;
+; pr_states.vhd                                 ; Project Directory  ; work    ; 530a763ad0490bbdf7978e3211555cec ;
+; PR_test_top.vhd                               ; Project Directory  ; work    ; b035f4aeaa5d739f7abce693115211cc ;
+; pr_user_host.vhd                              ; Project Directory  ; work    ; 92916966331bd9133a29a390f2ce92bd ;
+; rom_bitstream.vhd                             ; Project Directory  ; work    ; 5ee4142064d56332d175a8f201a8f91b ;
+; ticker_disp.vhd                               ; Project Directory  ; work    ; 493d81e91ad46f3e1329f0d52b48c551 ;
 +-----------------------------------------------+--------------------+---------+----------------------------------+
 
 
@@ -398,23 +398,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                 ; Library Name ;
 +---------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
-; |PR_test_top                          ; 88 (0)            ; 30 (0)       ; 0                 ; 0          ; 0    ; 0            ; |PR_test_top                                                                                        ; work         ;
-;    |freeze_region:freeze_region_inst| ; 88 (0)            ; 30 (0)       ; 0                 ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst                                                       ; work         ;
-;       |led_wrapper:led_wrapper_inst|  ; 88 (4)            ; 30 (0)       ; 0                 ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst                          ; work         ;
-;          |led_flash:led_flash_inst|   ; 84 (84)           ; 30 (30)      ; 0                 ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst ; work         ;
+; |PR_test_top                          ; 159 (0)           ; 32 (0)       ; 0                 ; 0          ; 0    ; 0            ; |PR_test_top                                                                                        ; work         ;
+;    |freeze_region:freeze_region_inst| ; 159 (0)           ; 32 (0)       ; 0                 ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst                                                       ; work         ;
+;       |led_wrapper:led_wrapper_inst|  ; 159 (0)           ; 32 (0)       ; 0                 ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst                          ; work         ;
+;          |led_flash:led_flash_inst|   ; 159 (159)         ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst ; work         ;
 +---------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds[0]              ;
-; 5:1                ; 26 bits   ; 78 LEs        ; 0 LEs                ; 78 LEs                 ; Yes        ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|\led_flash:count[21] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|leds                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
+; 8:1                ; 28 bits   ; 140 LEs       ; 0 LEs                ; 140 LEs                ; Yes        ; |PR_test_top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst|count[17] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------+
@@ -422,8 +420,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+-------------------+---------+----------------------------------+
 ; File              ; Location          ; Library ; Checksum                         ;
 +-------------------+-------------------+---------+----------------------------------+
-; led_flash_2.vhd   ; Project Directory ; work    ; c20317124526790473af45ff705a5bba ;
-; led_wrapper_2.vhd ; Project Directory ; work    ; a8cb0190df71fd4a1dd1fd514a7dfd18 ;
+; led_flash_2.vhd   ; Project Directory ; work    ; 8c71a62bf7941841eb74248440503198 ;
+; led_wrapper_2.vhd ; Project Directory ; work    ; c91e5cb413a77ba5297053c6fdf3fb88 ;
 +-------------------+-------------------+---------+----------------------------------+
 
 
@@ -432,24 +430,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------------------------------------+
 ; Type                  ; Count                                                ;
 +-----------------------+------------------------------------------------------+
-; arriav_ff             ; 30                                                   ;
-;     SCLR              ; 26                                                   ;
+; arriav_ff             ; 32                                                   ;
+;     SCLR              ; 28                                                   ;
 ;     plain             ; 4                                                    ;
-; arriav_lcell_comb     ; 88                                                   ;
-;     arith             ; 26                                                   ;
-;         1 data inputs ; 26                                                   ;
-;     extend            ; 1                                                    ;
-;         7 data inputs ; 1                                                    ;
-;     normal            ; 61                                                   ;
-;         2 data inputs ; 11                                                   ;
-;         3 data inputs ; 4                                                    ;
-;         4 data inputs ; 8                                                    ;
-;         5 data inputs ; 9                                                    ;
-;         6 data inputs ; 29                                                   ;
+; arriav_lcell_comb     ; 159                                                  ;
+;     arith             ; 28                                                   ;
+;         1 data inputs ; 28                                                   ;
+;     normal            ; 131                                                  ;
+;         2 data inputs ; 17                                                   ;
+;         3 data inputs ; 6                                                    ;
+;         4 data inputs ; 19                                                   ;
+;         5 data inputs ; 17                                                   ;
+;         6 data inputs ; 72                                                   ;
 ; boundary_port         ; 6                                                    ;
 ;                       ;                                                      ;
-; Max LUT depth         ; 6.80                                                 ;
-; Average LUT depth     ; 5.98                                                 ;
+; Max LUT depth         ; 7.70                                                 ;
+; Average LUT depth     ; 6.99                                                 ;
 +-----------------------+------------------------------------------------------+
 
 
@@ -486,7 +482,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+--------------+
 ; Partition Name               ; Elapsed Time ;
 +------------------------------+--------------+
-; led_wrapper:led_wrapper_inst ; 00:00:00     ;
+; led_wrapper:led_wrapper_inst ; 00:00:01     ;
 +------------------------------+--------------+
 
 
@@ -495,10 +491,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Thu Jun 11 15:49:36 2015
+    Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+    Info: Processing started: Mon Jun 15 19:15:04 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PR_test -c ReconfigRev
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ticker_disp.vhd
     Info (12022): Found design unit 1: ticker_disp-behavior
     Info (12023): Found entity 1: ticker_disp
@@ -536,15 +532,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file led_wra
     Info (12022): Found design unit 1: led_wrapper-behv
     Info (12023): Found entity 1: led_wrapper
 Info (12021): Found 2 design units, including 1 entities, in source file led_flash_2.vhd
-    Info (12022): Found design unit 1: led_flash-behv
+    Info (12022): Found design unit 1: led_flash-behavior
     Info (12023): Found entity 1: led_flash
 Info (12127): Elaborating entity "PR_test_top" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at PR_test_top.vhd(81): object "pr_freeze_reg1" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at PR_test_top.vhd(82): object "really_done" assigned a value but never read
+Warning (10873): Using initial value X (don't care) for net "LED[3..0]" at PR_test_top.vhd(23)
 Info (12128): Elaborating entity "freeze_region" for hierarchy "freeze_region:freeze_region_inst"
-Warning (10541): VHDL Signal Declaration warning at freeze_region.vhd(9): used implicit default value for signal "second_leds" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "led_wrapper" for hierarchy "freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst"
 Info (12128): Elaborating entity "led_flash" for hierarchy "freeze_region:freeze_region_inst|led_wrapper:led_wrapper_inst|led_flash:led_flash_inst"
+Warning (10540): VHDL Signal Declaration warning at led_flash_2.vhd(12): used explicit default value for signal "max_count" because signal was never assigned a value
 Info (12128): Elaborating entity "pr_user_host" for hierarchy "pr_user_host:pr_user_host_inst"
 Info (12128): Elaborating entity "pr_states" for hierarchy "pr_user_host:pr_user_host_inst|pr_states:pr_states_inst"
 Info (12128): Elaborating entity "pr_engine" for hierarchy "pr_user_host:pr_user_host_inst|pr_engine:pr_engine_inst"
@@ -592,14 +589,14 @@ Info (12207): 1 design partition does not require synthesis
     Info (12226): Partition "Top" does not require synthesis because it has an input persona
 Info (281019): Starting Logic Optimization and Technology Mapping for Partition led_wrapper:led_wrapper_inst
 Info (286031): Timing-Driven Synthesis is running on partition "led_wrapper:led_wrapper_inst"
-Info (21057): Implemented 120 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 193 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 114 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 868 megabytes
-    Info: Processing ended: Thu Jun 11 15:49:48 2015
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:22
+    Info (21061): Implemented 187 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 824 megabytes
+    Info: Processing ended: Mon Jun 15 19:15:40 2015
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:47
 
 

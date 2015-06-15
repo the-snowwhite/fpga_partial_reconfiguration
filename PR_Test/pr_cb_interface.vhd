@@ -61,7 +61,7 @@ begin
 pr_ready 	<= pr_ready_w;
 pr_done		<= pr_done_w;
 pr_error 	<= pr_error_w;
-crc_error 	<=	crc_error_w;
+crc_error   <= crc_error_reg;
 
 pr_cb_states_inst : pr_cb_states
 port map (	sreset 			=> sreset,
@@ -72,7 +72,7 @@ port map (	sreset 			=> sreset,
 				ready_for_pr 	=> ready_for_pr,
 				pr_request 		=> pr_request,
 				pr_error 		=> pr_error_w,
-				crc_error 		=> crc_error_w,
+				crc_error 		=> crc_error_reg,
 				pr_done 			=> pr_done_w);
 
 cyclonev_prblock_inst : cyclonev_prblock

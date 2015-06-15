@@ -20,7 +20,7 @@ entity PR_test_top is
 			
 			PR_done_led			: out STD_LOGIC; 
 			PR_error_led		: out STD_LOGIC;			
-			LED					: out STD_LOGIC_VECTOR (7 downto 0);
+			LED					: out STD_LOGIC_VECTOR (3 downto 0);
 			
 			disp_hex0			: out STD_LOGIC_VECTOR (6 downto 0); -- 7-bit decoded output 7-Segment display
 			disp_hex1			: out STD_LOGIC_VECTOR (6 downto 0);
@@ -37,8 +37,7 @@ architecture behv of PR_test_top is
 		 port( clk			:in STD_LOGIC;
 			dir				:in STD_LOGIC;		 
 			freeze			:in STD_LOGIC;
-			leds				:out STD_LOGIC_VECTOR (3 downto 0);
-			second_leds		:out STD_LOGIC_VECTOR (3 downto 0)
+			leds				:out STD_LOGIC_VECTOR (3 downto 0)
 			);
     end component freeze_region;
 	 
@@ -78,7 +77,6 @@ signal pr_freeze_reg 		: STD_LOGIC;
 signal pr_freeze 				: STD_LOGIC;
 signal channel 				: STD_LOGIC;
 signal done_w 					: STD_LOGIC;
-signal pr_freeze_reg1 		: STD_LOGIC;
 signal really_done 	 		: STD_LOGIC;
 signal error_flag_pr_w		: STD_LOGIC;
 	 
@@ -88,10 +86,10 @@ channel <= dir_switch_1;
 freeze_region_inst: freeze_region
  port map (
    clk   	=> system_clock,
-   freeze 	=> '0', --pr_freeze,	
+   freeze 	=> pr_freeze_reg,	
    dir   	=> dir_switch_2, 
-   leds  	=> LED(7 downto 4),
-	second_leds => LED(3 downto 0)
+   leds  	=> LED(3 downto 0)
+
 	);
 
 pr_user_host_inst : pr_user_host	
@@ -119,7 +117,7 @@ ticker_inst: ticker_disp
  process(system_clock) begin
 	if rising_edge(system_clock) then
 		PR_done_led  		<= not done_w; 
-		pr_freeze_reg1    <= pr_freeze;		
+		pr_freeze_reg     <= pr_freeze;		
 		PR_error_led 		<= not error_flag_pr_w;
 	end if;	
 end process;

@@ -19,7 +19,7 @@ component altsyncram
                 clock_enable_input_a    	: string := "BYPASS";
                 clock_enable_output_a  	: string := "BYPASS";
                 intended_device_family  	: string := "Cyclone V";
-                init_file       				: string := "persona1_rom_pr.mif";
+                init_file       				: string := "persona2_rom_pr.mif";
                 numwords_a      				: natural := 650000;
                 operation_mode  				: string := "ROM";
                 outdata_aclr_a  				: string := "NONE";
