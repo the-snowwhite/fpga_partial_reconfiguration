@@ -1,0 +1,11 @@
+.txt~
+.bak
+.qpf
+.rbf
+db/
+incremental_db/
+output_files/
+persona/
+modelsim/
+
+
