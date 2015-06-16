@@ -1,4 +1,4 @@
-
+﻿
 TESTEETESTE
 
 
@@ -31,3 +31,7 @@ DONE:
 - Einen zweiten wrapper unter der freeezeregion zu erstellen + eine weitere LED_flash entity, die 3 LEDs in irgendeiner weise blinken lässt.
 
 - LED Blinkmuster mit 4 LEDs erstellen (direkt unter dem toplevelmodul). Dieses beweist, das der Teil der nicht rekonfiguriert wird einfach weiter läuft // TICKER
+
+-external internal?
+
+-FPP16 und PCIe schnittstelle 
